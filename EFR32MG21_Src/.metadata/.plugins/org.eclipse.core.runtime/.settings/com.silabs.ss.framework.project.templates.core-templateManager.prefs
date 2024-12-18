@@ -1,0 +1,8 @@
+defaultSelection=\u0000
+disabledIDs=\u0000
+eclipse.preferences.version=1
+enabledIDs=template.esf.com.silabs.template.external.com.silabs.sdk.stack.super.znet.EmberZNet 6.7.10.0 GA SoC.Empty znet application_2.7.10._1265011390.6.7.10._2081975675\u0000template.esf.com.silabs.template.external.com.silabs.sdk.stack.super.znet.EmberZNet 6.7.10.0 GA Host.Empty znet application_2.7.10._1265011390.6.7.10._2081975675\u0000template.esf.com.silabs.template.external.com.silabs.sdk.stack.super.znet.EmberZNet 6.7.10.0 GA SoC.Z3Light_2.7.10._1265011390.6.7.10._2081975675\u0000
+knownPackageIds=
+knownParentDescs_com.silabs.ss.platform.sdk.core-protocolRegistry=com.silabs.sdk.stack.super\:2.7.10._1265011390.com.silabs.sdk.micrium\:5.8.3._-985231017\u0000com.silabs.sdk.stack.super\:2.7.10._1265011390.com.silabs.sdk.stack.bootloader\:1.10.3._1807390165\u0000com.silabs.sdk.stack.super\:2.7.10._1265011390.com.silabs.sdk.stack.znet\:6.7.10.0_-1772068171
+knownParentDescs_com.silabs.ss.platform.sdk.core-sdkManager=com.silabs.sdk.none\:0.0.0\u0000com.silabs.sdk.stack.super\:2.7.10._1265011390\u0000com.silabs.stack.external.stackless\:1.0.0._1234321
+lastRefreshDate=1733062523443

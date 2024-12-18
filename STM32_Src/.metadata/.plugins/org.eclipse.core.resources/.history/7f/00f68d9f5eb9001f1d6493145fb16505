@@ -1,0 +1,68 @@
+/*
+ * ld2410test.c
+ *
+ *  Created on: Dec 13, 2024
+ *      Author: Mr.hDung
+ */
+
+#include "ld2410test.h";
+#include "usart.h"
+
+static uint8_t frame[50] = {0};
+static uint16_t length = 0;
+
+static void setHeader(){
+	frame[length++] = 0xFD;
+	frame[length++] = 0xFC;
+	frame[length++] = 0xFB;
+	frame[length++] = 0xFA;
+}
+
+static void setEndFrame(){
+	frame[length++] = 0x04;
+	frame[length++] = 0x03;
+	frame[length++] = 0x02;
+	frame[length++] = 0x01;
+}
+static void setConfiguration(uint8_t enable){
+	if(enable == 1){
+		length = 0;
+		setHeader();
+		frame[length++] = 0x04;
+		frame[length++] = 0x00;
+		frame[length++] = 0xFF;
+		frame[length++] = 0x00;
+		frame[length++] = 0x01;
+		frame[length++] = 0x00;
+		setEndFrame();
+	}
+	else{
+		length = 0;
+		setHeader();
+		frame[length++] = 0x02;
+		frame[length++] = 0x00;
+		frame[length++] = 0xFE;
+		frame[length++] = 0x00;
+		setEndFrame();
+	}
+	USART_SendFrame(frame, length);
+}
+
+
+
+void setDistance(uint8_t value){
+	setConfiguration(1);
+
+	length = 0;
+
+	setConfiguration(0);
+}
+void setSensitivity(uint8_t value){
+
+}
+void setLatency(uint8_t value){
+
+}
+
+
+

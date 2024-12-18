@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="Device_t* DeviceManager_GetDeviceList (void)" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="Device_t* DeviceManager_GetDeviceList (void)"/>
+			<item value="bool DeviceManager_SetStateLedOff(EmberNodeId nodeId)"/>
+			<item value="bool DeviceManager_SetStateLedOn(EmberNodeId nodeId)"/>
+			<item value="bool DeviceManager_SetDeviceOffline(EmberNodeId nodeId)"/>
+			<item value="bool DeviceManager_SetDeviceOnline(EmberNodeId nodeId)"/>
+			<item value="void DeviceManager_UpdateLastTime (EmberNodeId nodeId, uint32_t time)"/>
+			<item value="uint8_t DeviceManager_GetDeviceCountToList (void)"/>
+			<item value="uint8_t DeviceManager_GetDeviceIndex (EmberNodeId nodeId)"/>
+		</list>
+		<list key="replacehistory">
+			<item value="g_systemState"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="1117" key="DIALOG_X_ORIGIN"/>
+		<item value="130" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

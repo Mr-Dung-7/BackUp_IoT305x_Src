@@ -1,0 +1,952 @@
+!SESSION 2024-12-01 20:44:23.940 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-01 20:44:32.006
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-01 20:44:32.022
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-01 20:44:44.917
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement_20170905.html
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-01 20:44:44.920
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/features/org.eclipse.rcp_4.5.1.v20150904-0015/license.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-01 20:44:44.921
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-01 20:44:44.921
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Master_Software_License_Agreement/Master_Software_License_Agreement_20210909.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-01 20:45:18.845
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-01 21:15:26.018
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/sdks_gecko_sdk_suite_v2.5_.studio_demos.xml for key com.silabs.sdk.stack.super:2.5.3./demosFile/0
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-01 21:15:26.033
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/slThread_docContent.xml for key com.silabs.sdk.stack.super:2.5.3..com.silabs.sdk.stack.thread:2.9.3.0/docsFile/-1
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:15:31.002
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40] in framework gpd
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:15:31.002
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32] in framework ncp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:15:31.112
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40, RM21Z000F1024IM32] in framework znet
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:16:51.101
+!MESSAGE Implicit declaration of spec se-1.2a-07-5356-21
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:16:51.382
+!MESSAGE Implicit declaration of spec gp-1.0-15-2014-05-CCB2180
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:16:51.382
+!MESSAGE Implicit declaration of spec gp-1.0-15-02014-011
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:16:53.750
+!MESSAGE Unknown callback listed in plugin IAS Zone Server: emberAfWwahAppEventRetryManagerConfigBackoffParamsCallback
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:16:53.751
+!MESSAGE Unknown callback listed in plugin IAS Zone Server: emberAfWwahAppEventRetryManagerSetBackoffParamsToDefault
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:16:54.427
+!MESSAGE Unknown callback listed in plugin DMP Tuning and Testing: emRadioConfigScheduledCallback
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:16:54.582
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:16:54.583
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:16:54.583
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:17:18.943
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:17:18.943
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:17:18.943
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-01 21:17:27.653
+!MESSAGE Indexed 'EFR32MG21_ZC' (1 sources, 0 headers) in 1.06 sec: 28 declarations; 55 references; 1 unresolved inclusions; 5 syntax errors; 44 unresolved names (35%)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:17:30.354
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:17:30.354
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:17:30.355
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:25:58.590
+!MESSAGE Did not find: 'D:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\ncp\plugin\..\..\framework\plugin\coulomb-counter', proceeding without.
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:26:07.904
+!MESSAGE Unknown callback listed in plugin IAS Zone Server: emberAfWwahAppEventRetryManagerConfigBackoffParamsCallback
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 21:26:07.905
+!MESSAGE Unknown callback listed in plugin IAS Zone Server: emberAfWwahAppEventRetryManagerSetBackoffParamsToDefault
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2024-12-01 21:28:05.830
+!MESSAGE Generation successful!
+
+
+Files generated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-bookkeeping.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-bookkeeping.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\mbedtls-config-generated.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-mfg-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\attribute-type.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\attribute-size.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\attribute-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\att-storage.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\call-command-handler.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\call-command-handler.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\command-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\cluster-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\enums.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\print-cluster.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\af-structs.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC_tokens.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC_endpoint_config.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\af-gen-event.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-cli.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-cli.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC-postbuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC-prebuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC.mak
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC-postbuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC-prebuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\callback.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\callback-stub.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\client-command-macro.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\debug-printing.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\debug-printing-test.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\stack-handler-stub.c
+
+Files always updated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC
+
+Unmodified files:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\custom_efr32mg21a010f512im32.hwconf
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\hal-config\hal-config.h
+
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:03:19.935
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:03:19.949
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:03:19.957
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2024-12-01 22:08:31.275
+!MESSAGE Generation successful!
+
+Files backed up:
+   af-gen-event.h backed up to af-gen-event.h.bak
+
+Files generated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\af-gen-event.h
+
+Files always updated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC
+
+Unmodified files:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-bookkeeping.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-bookkeeping.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\custom_efr32mg21a010f512im32.hwconf
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\hal-config\hal-config.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\mbedtls-config-generated.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-mfg-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\attribute-type.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\attribute-size.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\attribute-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\att-storage.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\call-command-handler.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\call-command-handler.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\command-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\cluster-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\enums.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\print-cluster.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\af-structs.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC_tokens.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC_endpoint_config.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-cli.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\znet-cli.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC-postbuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC-prebuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC.mak
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC-postbuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\EFR32MG21_ZC-prebuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\callback.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\callback-stub.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\client-command-macro.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\debug-printing.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\debug-printing-test.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC\stack-handler-stub.c
+
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:16:29.759
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:16:29.759
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:16:29.759
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:16:32.649
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:16:32.649
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:16:32.649
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-01 22:16:36.319
+!MESSAGE Indexed 'EFR32MG21_Led' (1 sources, 0 headers) in 0.02 sec: 28 declarations; 55 references; 1 unresolved inclusions; 5 syntax errors; 44 unresolved names (35%)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:16:36.319
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:16:36.327
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 22:16:36.329
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2024-12-01 23:27:08.888
+!MESSAGE Generation failed
+!STACK 0
+com.ember.workbench.app_framework.model.ConfigurationException: Plugin emberAfPluginLevelControl requires the following ZCL clusters to be selected:
+Server-side Cluster: level control
+	at com.ember.workbench.x3.generator.Afx3Generator.verifyClusterPluginConsistency(Afx3Generator.java:776)
+	at com.ember.workbench.x3.generator.Afx3Generator.generateAppHeader(Afx3Generator.java:674)
+	at com.ember.workbench.x3.generator.Afx3Generator.generate(Afx3Generator.java:1069)
+	at com.ember.workbench.app_framework.ui.AppFrameworkUiUtilities$GenerateRunnable.run(AppFrameworkUiUtilities.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2024-12-01 23:29:32.248
+!MESSAGE Generation successful!
+
+
+Files generated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-bookkeeping.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-bookkeeping.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\mbedtls-config-generated.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-mfg-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\attribute-type.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\attribute-size.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\attribute-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\att-storage.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\call-command-handler.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\call-command-handler.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\command-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\cluster-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\enums.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\print-cluster.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\af-structs.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led_tokens.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led_endpoint_config.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\af-gen-event.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-cli.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-cli.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led-postbuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led-prebuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led.mak
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led-postbuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led-prebuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\callback.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\callback-stub.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\client-command-macro.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\debug-printing.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\debug-printing-test.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\stack-handler-stub.c
+
+Files always updated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led
+
+Unmodified files:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\custom_efr32mg21a010f512im32.hwconf
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\hal-config\hal-config.h
+
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 23:47:19.617
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 23:47:19.633
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-01 23:47:19.633
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2024-12-02 20:13:11.628
+!MESSAGE Generation successful!
+
+Files backed up:
+   af-gen-event.h backed up to af-gen-event.h.bak
+
+Files generated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\af-gen-event.h
+
+Files always updated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led
+
+Unmodified files:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-bookkeeping.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-bookkeeping.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\custom_efr32mg21a010f512im32.hwconf
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\hal-config\hal-config.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\mbedtls-config-generated.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-mfg-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\attribute-type.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\attribute-size.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\attribute-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\att-storage.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\call-command-handler.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\call-command-handler.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\command-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\cluster-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\enums.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\print-cluster.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\af-structs.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led_tokens.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led_endpoint_config.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-cli.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\znet-cli.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led-postbuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led-prebuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led.mak
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led-postbuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\EFR32MG21_Led-prebuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\callback.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\callback-stub.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\client-command-macro.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\debug-printing.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\debug-printing-test.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led\stack-handler-stub.c
+
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:25:49.378
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:25:49.393
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:25:49.393
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:25:53.621
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:25:53.621
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:25:53.621
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-02 21:25:56.883
+!MESSAGE Indexed 'EFR32MG21_Sensor' (1 sources, 0 headers) in 0.031 sec: 28 declarations; 55 references; 1 unresolved inclusions; 5 syntax errors; 44 unresolved names (35%)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:25:56.899
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:25:56.899
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:25:56.899
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+!SESSION 2024-12-02 21:33:46.880 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-02 21:34:14.832
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-02 21:34:14.854
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-02 21:34:25.663
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/sdks_gecko_sdk_suite_v2.5_.studio_demos.xml for key com.silabs.sdk.stack.super:2.5.3./demosFile/0
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-02 21:34:25.668
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/slThread_docContent.xml for key com.silabs.sdk.stack.super:2.5.3..com.silabs.sdk.stack.thread:2.9.3.0/docsFile/-1
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:34:55.579
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40] in framework gpd
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:34:55.620
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32] in framework ncp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:34:56.082
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40, RM21Z000F1024IM32] in framework znet
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:34:59.520
+!MESSAGE Implicit declaration of spec se-1.2a-07-5356-21
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:34:59.942
+!MESSAGE Implicit declaration of spec gp-1.0-15-2014-05-CCB2180
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:34:59.943
+!MESSAGE Implicit declaration of spec gp-1.0-15-02014-011
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:35:08.349
+!MESSAGE Unknown callback listed in plugin IAS Zone Server: emberAfWwahAppEventRetryManagerConfigBackoffParamsCallback
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:35:08.350
+!MESSAGE Unknown callback listed in plugin IAS Zone Server: emberAfWwahAppEventRetryManagerSetBackoffParamsToDefault
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:35:08.393
+!MESSAGE Unknown callback listed in plugin DMP Tuning and Testing: emRadioConfigScheduledCallback
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:35:08.542
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:35:08.543
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 21:35:08.544
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-02 21:35:43.248
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement_20170905.html
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-02 21:35:43.251
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/features/org.eclipse.rcp_4.5.1.v20150904-0015/license.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-02 21:35:43.252
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-02 21:35:43.253
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Master_Software_License_Agreement/Master_Software_License_Agreement_20210909.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-02 21:36:19.153
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+!SESSION 2024-12-02 22:07:16.390 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-02 22:07:23.480
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-02 22:07:23.496
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-02 22:07:26.155
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/sdks_gecko_sdk_suite_v2.5_.studio_demos.xml for key com.silabs.sdk.stack.super:2.5.3./demosFile/0
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-02 22:07:26.170
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/slThread_docContent.xml for key com.silabs.sdk.stack.super:2.5.3..com.silabs.sdk.stack.thread:2.9.3.0/docsFile/-1
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:33.463
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40] in framework gpd
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:33.463
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32] in framework ncp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:33.573
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40, RM21Z000F1024IM32] in framework znet
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:36.122
+!MESSAGE Implicit declaration of spec se-1.2a-07-5356-21
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:36.376
+!MESSAGE Implicit declaration of spec gp-1.0-15-2014-05-CCB2180
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:36.378
+!MESSAGE Implicit declaration of spec gp-1.0-15-02014-011
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:38.293
+!MESSAGE Unknown callback listed in plugin IAS Zone Server: emberAfWwahAppEventRetryManagerConfigBackoffParamsCallback
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:38.294
+!MESSAGE Unknown callback listed in plugin IAS Zone Server: emberAfWwahAppEventRetryManagerSetBackoffParamsToDefault
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:38.326
+!MESSAGE Unknown callback listed in plugin DMP Tuning and Testing: emRadioConfigScheduledCallback
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:38.405
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:38.405
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:07:38.405
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-02 22:07:54.736
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement_20170905.html
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-02 22:07:54.736
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/features/org.eclipse.rcp_4.5.1.v20150904-0015/license.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-02 22:07:54.747
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-02 22:07:54.757
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Master_Software_License_Agreement/Master_Software_License_Agreement_20210909.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-02 22:08:32.243
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2024-12-02 22:18:39.167
+!MESSAGE Generation failed
+!STACK 0
+com.ember.workbench.app_framework.model.ConfigurationException: Plugin emberAfPluginScenes requires the following ZCL clusters to be selected:
+Server-side Cluster: scenes
+	at com.ember.workbench.x3.generator.Afx3Generator.verifyClusterPluginConsistency(Afx3Generator.java:776)
+	at com.ember.workbench.x3.generator.Afx3Generator.generateAppHeader(Afx3Generator.java:674)
+	at com.ember.workbench.x3.generator.Afx3Generator.generate(Afx3Generator.java:1069)
+	at com.ember.workbench.app_framework.ui.AppFrameworkUiUtilities$GenerateRunnable.run(AppFrameworkUiUtilities.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2024-12-02 22:19:03.178
+!MESSAGE Generation failed
+!STACK 0
+com.ember.workbench.app_framework.model.ConfigurationException: Plugin emberAfPluginGroupsServer requires the following ZCL clusters to be selected:
+Server-side Cluster: Groups
+	at com.ember.workbench.x3.generator.Afx3Generator.verifyClusterPluginConsistency(Afx3Generator.java:776)
+	at com.ember.workbench.x3.generator.Afx3Generator.generateAppHeader(Afx3Generator.java:674)
+	at com.ember.workbench.x3.generator.Afx3Generator.generate(Afx3Generator.java:1069)
+	at com.ember.workbench.app_framework.ui.AppFrameworkUiUtilities$GenerateRunnable.run(AppFrameworkUiUtilities.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2024-12-02 22:20:45.275
+!MESSAGE Generation failed
+!STACK 0
+com.ember.workbench.app_framework.model.ConfigurationException: Plugin emberAfPluginLevelControl requires the following ZCL clusters to be selected:
+Server-side Cluster: level control
+	at com.ember.workbench.x3.generator.Afx3Generator.verifyClusterPluginConsistency(Afx3Generator.java:776)
+	at com.ember.workbench.x3.generator.Afx3Generator.generateAppHeader(Afx3Generator.java:674)
+	at com.ember.workbench.x3.generator.Afx3Generator.generate(Afx3Generator.java:1069)
+	at com.ember.workbench.app_framework.ui.AppFrameworkUiUtilities$GenerateRunnable.run(AppFrameworkUiUtilities.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2024-12-02 22:20:54.906
+!MESSAGE Generation failed
+!STACK 0
+com.ember.workbench.app_framework.model.ConfigurationException: Plugin emberAfPluginOnOff requires the following ZCL clusters to be selected:
+Server-side Cluster: on/off
+	at com.ember.workbench.x3.generator.Afx3Generator.verifyClusterPluginConsistency(Afx3Generator.java:776)
+	at com.ember.workbench.x3.generator.Afx3Generator.generateAppHeader(Afx3Generator.java:674)
+	at com.ember.workbench.x3.generator.Afx3Generator.generate(Afx3Generator.java:1069)
+	at com.ember.workbench.app_framework.ui.AppFrameworkUiUtilities$GenerateRunnable.run(AppFrameworkUiUtilities.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2024-12-02 22:21:30.143
+!MESSAGE Generation successful!
+
+
+Files generated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-bookkeeping.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-bookkeeping.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\mbedtls-config-generated.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-mfg-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\attribute-type.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\attribute-size.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\attribute-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\att-storage.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\call-command-handler.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\call-command-handler.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\command-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\cluster-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\enums.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\print-cluster.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\af-structs.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor_tokens.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor_endpoint_config.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\af-gen-event.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-cli.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-cli.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor-postbuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor-prebuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor.mak
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor-postbuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor-prebuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\callback.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\callback-stub.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\client-command-macro.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\debug-printing.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\debug-printing-test.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\stack-handler-stub.c
+
+Files always updated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor
+
+Unmodified files:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\custom_efr32mg21a010f512im32.hwconf
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\hal-config\hal-config.h
+
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:37:04.249
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:37:04.249
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-02 22:37:04.265
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 1 0 2024-12-02 22:44:18.535
+!MESSAGE Generation successful!
+
+Files backed up:
+   af-gen-event.h backed up to af-gen-event.h.bak
+
+Files generated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\af-gen-event.h
+
+Files always updated:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor
+
+Unmodified files:
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-bookkeeping.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-bookkeeping.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\custom_efr32mg21a010f512im32.hwconf
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\hal-config\hal-config.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\mbedtls-config-generated.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-mfg-token.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\attribute-type.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\attribute-size.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\attribute-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\att-storage.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\call-command-handler.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\call-command-handler.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\command-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\cluster-id.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\enums.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\print-cluster.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\af-structs.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor_tokens.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor_endpoint_config.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-cli.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\znet-cli.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor-postbuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor-prebuild.py
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor.mak
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor-postbuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\EFR32MG21_Sensor-prebuild.bat
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\callback.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\callback-stub.c
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\client-command-macro.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\debug-printing.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\debug-printing-test.h
+   D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor\stack-handler-stub.c
+
+!SESSION 2024-12-10 15:43:25.194 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-10 15:43:51.622
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-10 15:43:51.643
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY org.eclipse.equinox.ds 2 0 2024-12-10 15:44:11.340
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:63)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicRefreshRepository(AbstractRepositoryManager.java:203)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.refreshRepository(MetadataRepositoryManager.java:100)
+	at com.silabs.ss.platform.internal.api.installer.core.SLSP2UpdateSites.ensureStudioReposLoaded(SLSP2UpdateSites.java:643)
+	at com.silabs.ss.platform.internal.api.installer.core.InstallerUtils.ensurePackagesFetched(InstallerUtils.java:2005)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager.updatePackageMetadata(UpdateManager.java:215)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager.ensureUpdatesFetched(UpdateManager.java:286)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager.access$4(UpdateManager.java:277)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager$1.run(UpdateManager.java:166)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-10 15:44:11.513
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement_20170905.html
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-10 15:44:11.513
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/features/org.eclipse.rcp_4.5.1.v20150904-0015/license.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-10 15:44:11.514
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-10 15:44:11.514
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Master_Software_License_Agreement/Master_Software_License_Agreement_20210909.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-10 15:44:16.163
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/sdks_gecko_sdk_suite_v2.5_.studio_demos.xml for key com.silabs.sdk.stack.super:2.5.3./demosFile/0
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-10 15:44:16.167
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/slThread_docContent.xml for key com.silabs.sdk.stack.super:2.5.3..com.silabs.sdk.stack.thread:2.9.3.0/docsFile/-1
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-10 15:44:22.599
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-10 15:44:39.907
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40] in framework gpd
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-10 15:44:39.952
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32] in framework ncp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-10 15:44:40.343
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40, RM21Z000F1024IM32] in framework znet
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-10 15:45:32.081
+!MESSAGE Indexed 'EFR32MG21_ZC' (249 sources, 538 headers) in 33.4 sec: 41,180 declarations; 89,233 references; 0 unresolved inclusions; 39 syntax errors; 267 unresolved names (0.2%)
+!SESSION 2024-12-11 07:40:19.026 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-11 07:40:46.009
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-11 07:40:46.062
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-11 07:40:59.996
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/sdks_gecko_sdk_suite_v2.5_.studio_demos.xml for key com.silabs.sdk.stack.super:2.5.3./demosFile/0
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-11 07:40:59.999
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/slThread_docContent.xml for key com.silabs.sdk.stack.super:2.5.3..com.silabs.sdk.stack.thread:2.9.3.0/docsFile/-1
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 07:41:25.900
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40] in framework gpd
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 07:41:25.973
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32] in framework ncp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 07:41:26.435
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40, RM21Z000F1024IM32] in framework znet
+
+!ENTRY org.eclipse.equinox.ds 2 0 2024-12-11 07:41:48.037
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:63)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicRefreshRepository(AbstractRepositoryManager.java:203)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.refreshRepository(MetadataRepositoryManager.java:100)
+	at com.silabs.ss.platform.internal.api.installer.core.SLSP2UpdateSites.ensureStudioReposLoaded(SLSP2UpdateSites.java:643)
+	at com.silabs.ss.platform.internal.api.installer.core.InstallerUtils.ensurePackagesFetched(InstallerUtils.java:2005)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager.updatePackageMetadata(UpdateManager.java:215)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager.ensureUpdatesFetched(UpdateManager.java:286)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager.access$4(UpdateManager.java:277)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager$1.run(UpdateManager.java:166)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-11 07:41:48.216
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement_20170905.html
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-11 07:41:48.216
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/features/org.eclipse.rcp_4.5.1.v20150904-0015/license.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-11 07:41:48.217
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-11 07:41:48.218
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Master_Software_License_Agreement/Master_Software_License_Agreement_20210909.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-11 07:41:58.032
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2024-12-11 14:14:27.365
+!MESSAGE No network interfaces found.
+!SESSION 2024-12-11 15:07:59.424 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-11 15:08:27.224
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2024-12-11 15:08:27.255
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-11 15:08:41.225
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/sdks_gecko_sdk_suite_v2.5_.studio_demos.xml for key com.silabs.sdk.stack.super:2.5.3./demosFile/0
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-11 15:08:41.225
+!MESSAGE No match for asset asset://aem/documents/referenced/studio/slThread_docContent.xml for key com.silabs.sdk.stack.super:2.5.3..com.silabs.sdk.stack.thread:2.9.3.0/docsFile/-1
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 15:09:05.932
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40] in framework gpd
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 15:09:05.978
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, RM21Z000F1024IM32] in framework ncp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 15:09:06.353
+!MESSAGE Unknown architecture(s) [EFR32MG13P732F512IM48, EFR32MG13P733F512IM48, EFR32MG13P832F512IM48, EFR32MG22A224F512IM32, EFR32MG22A224F512IM40, RM21Z000F1024IM32] in framework znet
+
+!ENTRY org.eclipse.equinox.ds 2 0 2024-12-11 15:09:26.605
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:63)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicRefreshRepository(AbstractRepositoryManager.java:203)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.refreshRepository(MetadataRepositoryManager.java:100)
+	at com.silabs.ss.platform.internal.api.installer.core.SLSP2UpdateSites.ensureStudioReposLoaded(SLSP2UpdateSites.java:643)
+	at com.silabs.ss.platform.internal.api.installer.core.InstallerUtils.ensurePackagesFetched(InstallerUtils.java:2005)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager.updatePackageMetadata(UpdateManager.java:215)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager.ensureUpdatesFetched(UpdateManager.java:286)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager.access$4(UpdateManager.java:277)
+	at com.silabs.ss.platform.internal.installer.core.updates.UpdateManager$1.run(UpdateManager.java:166)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-11 15:09:26.792
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement/Simplicity_Studio_Terms_of_Use_and_Privacy_Statement_20170905.html
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-11 15:09:26.792
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/features/org.eclipse.rcp_4.5.1.v20150904-0015/license.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-11 15:09:26.792
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.installer.core 4 0 2024-12-11 15:09:26.792
+!MESSAGE Error while updateLicenses from LicenseRetriever, asset reference not found: /C:/SiliconLabs/SimplicityStudio/v4/offline/common/Master_Software_License_Agreement/Master_Software_License_Agreement_20210909.html
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2024-12-11 15:09:37.428
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-11 21:12:14.060
+!MESSAGE Indexed 'EFR32MG21_Led' (241 sources, 532 headers) in 15.9 sec: 40,589 declarations; 86,461 references; 0 unresolved inclusions; 39 syntax errors; 242 unresolved names (0.19%)
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 21:36:53.660
+!MESSAGE Implicit declaration of spec se-1.2a-07-5356-21
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 21:36:54.379
+!MESSAGE Implicit declaration of spec gp-1.0-15-2014-05-CCB2180
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 21:36:54.381
+!MESSAGE Implicit declaration of spec gp-1.0-15-02014-011
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 21:37:06.164
+!MESSAGE Unknown callback listed in plugin IAS Zone Server: emberAfWwahAppEventRetryManagerConfigBackoffParamsCallback
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 21:37:06.167
+!MESSAGE Unknown callback listed in plugin IAS Zone Server: emberAfWwahAppEventRetryManagerSetBackoffParamsToDefault
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 21:37:06.237
+!MESSAGE Unknown callback listed in plugin DMP Tuning and Testing: emRadioConfigScheduledCallback
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 21:37:06.684
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 21:37:06.685
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 21:37:06.687
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 22:20:13.615
+!MESSAGE Architecture BRD4165A for board efr32/brd4165a is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 22:20:13.631
+!MESSAGE Architecture BRD4165B for board efr32/brd4165b is invalid
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2024-12-11 22:20:13.632
+!MESSAGE Architecture BRD4176A for board efr32/brd4176a is invalid

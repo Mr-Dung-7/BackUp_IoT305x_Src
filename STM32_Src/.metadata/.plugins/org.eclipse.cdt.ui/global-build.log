@@ -1,0 +1,85 @@
+08:22:04 **** Incremental Build of configuration Debug for project DisplayAndControl ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main-displaycontrol.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/button" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/buzzer" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/led" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/rtos" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/sensor" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/serial" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/ucglib" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Utilities" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main-displaycontrol.d" -MT"Src/main-displaycontrol.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main-displaycontrol.o"
+../Src/main-displaycontrol.c: In function 'main':
+../Src/main-displaycontrol.c:70:9: warning: implicit declaration of function 'EventSchedulerAdd' [-Wimplicit-function-declaration]
+   70 |         EventSchedulerAdd(EVENT_APP_INIT);
+      |         ^~~~~~~~~~~~~~~~~
+../Src/main-displaycontrol.c:75:17: warning: implicit declaration of function 'processEventScheduler'; did you mean 'processTimerScheduler'? [-Wimplicit-function-declaration]
+   75 |                 processEventScheduler();
+      |                 ^~~~~~~~~~~~~~~~~~~~~
+      |                 processTimerScheduler
+../Src/main-displaycontrol.c: In function 'Main_AppInitManager':
+../Src/main-displaycontrol.c:97:9: warning: implicit declaration of function 'EventSchedulerInit' [-Wimplicit-function-declaration]
+   97 |         EventSchedulerInit(Main_AppStateManager);
+      |         ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "DisplayAndControl.elf" @"objects.list"  -lLibraries -mcpu=cortex-m4 -T"D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\STM32_Src\DisplayAndControl\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DisplayAndControl.map" -Wl,--gc-sections -static -L"D:\1_Studying\1_IoT\1_FUNIX\Libraries_Add\SDK_1.0.3_NUCLEO-F401RE\lib_stm" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: DisplayAndControl.elf
+ 
+arm-none-eabi-size  DisplayAndControl.elf 
+arm-none-eabi-objdump -h -S DisplayAndControl.elf  > "DisplayAndControl.list"
+   text	   data	    bss	    dec	    hex	filename
+  29976	    216	   7912	  38104	   94d8	DisplayAndControl.elf
+Finished building: default.size.stdout
+ 
+Finished building: DisplayAndControl.list
+ 
+08:22:09 **** Incremental Build of configuration Debug for project DisplayAndControl ****
+make -j4 all 
+arm-none-eabi-size  DisplayAndControl.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29976	    216	   7912	  38104	   94d8	DisplayAndControl.elf
+Finished building: default.size.stdout
+ 
+08:24:54 **** Incremental Build of configuration Debug for project DisplayAndControl ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main-displaycontrol.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/button" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/buzzer" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/led" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/rtos" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/sensor" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/serial" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/ucglib" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Utilities" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main-displaycontrol.d" -MT"Src/main-displaycontrol.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main-displaycontrol.o"
+../Src/main-displaycontrol.c: In function 'main':
+../Src/main-displaycontrol.c:70:9: warning: implicit declaration of function 'EventSchedulerAdd' [-Wimplicit-function-declaration]
+   70 |         EventSchedulerAdd(EVENT_APP_INIT);
+      |         ^~~~~~~~~~~~~~~~~
+../Src/main-displaycontrol.c:75:17: warning: implicit declaration of function 'processEventScheduler'; did you mean 'processTimerScheduler'? [-Wimplicit-function-declaration]
+   75 |                 processEventScheduler();
+      |                 ^~~~~~~~~~~~~~~~~~~~~
+      |                 processTimerScheduler
+../Src/main-displaycontrol.c: In function 'Main_AppInitManager':
+../Src/main-displaycontrol.c:97:9: warning: implicit declaration of function 'EventSchedulerInit' [-Wimplicit-function-declaration]
+   97 |         EventSchedulerInit(Main_AppStateManager);
+      |         ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "DisplayAndControl.elf" @"objects.list"  -lLibraries -mcpu=cortex-m4 -T"D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\STM32_Src\DisplayAndControl\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DisplayAndControl.map" -Wl,--gc-sections -static -L"D:\1_Studying\1_IoT\1_FUNIX\Libraries_Add\SDK_1.0.3_NUCLEO-F401RE\lib_stm" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: DisplayAndControl.elf
+ 
+arm-none-eabi-size  DisplayAndControl.elf 
+arm-none-eabi-objdump -h -S DisplayAndControl.elf  > "DisplayAndControl.list"
+   text	   data	    bss	    dec	    hex	filename
+  29892	    216	   7912	  38020	   9484	DisplayAndControl.elf
+Finished building: default.size.stdout
+ 
+Finished building: DisplayAndControl.list
+ 
+08:27:27 **** Incremental Build of configuration Debug for project DisplayAndControl ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main-displaycontrol.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/CMSIS/Include" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Drivers/STM32F401RE_StdPeriph_Driver/inc" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/button" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/buzzer" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/led" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/rtos" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/sensor" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/serial" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Middle/ucglib" -I"D:/1_Studying/1_IoT/1_FUNIX/Libraries_Add/SDK_1.0.3_NUCLEO-F401RE/shared/Utilities" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main-displaycontrol.d" -MT"Src/main-displaycontrol.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main-displaycontrol.o"
+../Src/main-displaycontrol.c: In function 'main':
+../Src/main-displaycontrol.c:70:9: warning: implicit declaration of function 'EventSchedulerAdd' [-Wimplicit-function-declaration]
+   70 |         EventSchedulerAdd(EVENT_APP_INIT);
+      |         ^~~~~~~~~~~~~~~~~
+../Src/main-displaycontrol.c:75:17: warning: implicit declaration of function 'processEventScheduler'; did you mean 'processTimerScheduler'? [-Wimplicit-function-declaration]
+   75 |                 processEventScheduler();
+      |                 ^~~~~~~~~~~~~~~~~~~~~
+      |                 processTimerScheduler
+../Src/main-displaycontrol.c: In function 'Main_AppInitManager':
+../Src/main-displaycontrol.c:97:9: warning: implicit declaration of function 'EventSchedulerInit' [-Wimplicit-function-declaration]
+   97 |         EventSchedulerInit(Main_AppStateManager);
+      |         ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "DisplayAndControl.elf" @"objects.list"  -lLibraries -mcpu=cortex-m4 -T"D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\STM32_Src\DisplayAndControl\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DisplayAndControl.map" -Wl,--gc-sections -static -L"D:\1_Studying\1_IoT\1_FUNIX\Libraries_Add\SDK_1.0.3_NUCLEO-F401RE\lib_stm" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: DisplayAndControl.elf
+ 
+arm-none-eabi-size  DisplayAndControl.elf 
+arm-none-eabi-objdump -h -S DisplayAndControl.elf  > "DisplayAndControl.list"
+   text	   data	    bss	    dec	    hex	filename
+  29896	    216	   7912	  38024	   9488	DisplayAndControl.elf
+Finished building: default.size.stdout
+ 
+Finished building: DisplayAndControl.list
+ 
