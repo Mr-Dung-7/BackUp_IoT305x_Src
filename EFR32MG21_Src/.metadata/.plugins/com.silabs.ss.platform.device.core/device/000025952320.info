@@ -1,0 +1,4 @@
+protectFromDetectionUpdates=false
+label=SAM-ICE (25952320)
+boardOverrides {
+}

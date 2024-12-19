@@ -12,7 +12,11 @@
   EmberEventControl emberAfIdentifyClusterServerTickCallbackControl1; \
   EmberEventControl emberAfIdentifyClusterServerTickCallbackControl2; \
   EmberEventControl emberAfIdentifyClusterServerTickCallbackControl3; \
+  extern EmberEventControl I2CSendDataEventControl; \
+  extern EmberEventControl Ld2410DetectEventControl; \
+  extern EmberEventControl LdrEventControl; \
   extern EmberEventControl commissioningLedEventControl; \
+  extern EmberEventControl delayEventControl; \
   extern EmberEventControl emberAfPluginFindAndBindInitiatorCheckTargetResponsesEventControl; \
   extern EmberEventControl emberAfPluginInterpanFragmentReceiveEventControl; \
   extern EmberEventControl emberAfPluginInterpanFragmentTransmitEventControl; \
@@ -21,7 +25,19 @@
   extern EmberEventControl emberAfPluginScanDispatchScanEventControl; \
   extern EmberEventControl emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventControl; \
   extern EmberEventControl findingAndBindingEventControl; \
+  extern EmberEventControl joinNetworkEventControl; \
+  extern EmberEventControl keepAliveEventControl; \
+  extern EmberEventControl led1ToggleEventControl; \
+  extern EmberEventControl led2ToggleEventControl; \
+  extern EmberEventControl mainStateEventControl; \
+  extern EmberEventControl networkLeaveEventControl; \
+  extern EmberEventControl scanButtonEventControl; \
+  extern EmberEventControl systemTimerEventControl; \
+  extern void I2CSendDataEventHandler(void); \
+  extern void Ld2410DetectEventHandler(void); \
+  extern void LdrEventHandler(void); \
   extern void commissioningLedEventHandler(void); \
+  extern void delayEventHandler(void); \
   extern void emberAfPluginFindAndBindInitiatorCheckTargetResponsesEventHandler(void); \
   extern void emberAfPluginInterpanFragmentReceiveEventHandler(void); \
   extern void emberAfPluginInterpanFragmentTransmitEventHandler(void); \
@@ -30,6 +46,14 @@
   extern void emberAfPluginScanDispatchScanEventHandler(void); \
   extern void emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventHandler(void); \
   extern void findingAndBindingEventHandler(void); \
+  extern void joinNetworkEventHandler(void); \
+  extern void keepAliveEventHandler(void); \
+  extern void led1ToggleEventHandler(void); \
+  extern void led2ToggleEventHandler(void); \
+  extern void mainStateEventHandler(void); \
+  extern void networkLeaveEventHandler(void); \
+  extern void scanButtonEventHandler(void); \
+  extern void systemTimerEventHandler(void); \
   static void networkEventWrapper(EmberEventControl *control, EmberAfNetworkEventHandler handler, uint8_t networkIndex) \
   { \
     emberAfPushNetworkIndex(networkIndex); \
@@ -60,7 +84,11 @@
   { &emberAfIdentifyClusterServerTickCallbackControl1, emberAfIdentifyClusterServerTickCallbackWrapperFunction1 }, \
   { &emberAfIdentifyClusterServerTickCallbackControl2, emberAfIdentifyClusterServerTickCallbackWrapperFunction2 }, \
   { &emberAfIdentifyClusterServerTickCallbackControl3, emberAfIdentifyClusterServerTickCallbackWrapperFunction3 }, \
+  { &I2CSendDataEventControl, I2CSendDataEventHandler }, \
+  { &Ld2410DetectEventControl, Ld2410DetectEventHandler }, \
+  { &LdrEventControl, LdrEventHandler }, \
   { &commissioningLedEventControl, commissioningLedEventHandler }, \
+  { &delayEventControl, delayEventHandler }, \
   { &emberAfPluginFindAndBindInitiatorCheckTargetResponsesEventControl, emberAfPluginFindAndBindInitiatorCheckTargetResponsesEventHandler }, \
   { &emberAfPluginInterpanFragmentReceiveEventControl, emberAfPluginInterpanFragmentReceiveEventHandler }, \
   { &emberAfPluginInterpanFragmentTransmitEventControl, emberAfPluginInterpanFragmentTransmitEventHandler }, \
@@ -69,6 +97,14 @@
   { &emberAfPluginScanDispatchScanEventControl, emberAfPluginScanDispatchScanEventHandler }, \
   { &emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventControl, emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventHandler }, \
   { &findingAndBindingEventControl, findingAndBindingEventHandler }, \
+  { &joinNetworkEventControl, joinNetworkEventHandler }, \
+  { &keepAliveEventControl, keepAliveEventHandler }, \
+  { &led1ToggleEventControl, led1ToggleEventHandler }, \
+  { &led2ToggleEventControl, led2ToggleEventHandler }, \
+  { &mainStateEventControl, mainStateEventHandler }, \
+  { &networkLeaveEventControl, networkLeaveEventHandler }, \
+  { &scanButtonEventControl, scanButtonEventHandler }, \
+  { &systemTimerEventControl, systemTimerEventHandler }, \
   { &emberAfPluginEndDeviceSupportMoveNetworkEventControls[0], emberAfPluginEndDeviceSupportMoveNetworkEventWrapper0 }, \
   { &emberAfPluginEndDeviceSupportPollingNetworkEventControls[0], emberAfPluginEndDeviceSupportPollingNetworkEventWrapper0 }, \
 
@@ -77,7 +113,11 @@
   "Identify Cluster Server EP 1",  \
   "Identify Cluster Server EP 2",  \
   "Identify Cluster Server EP 3",  \
+  "Event data",  \
+  "Event data",  \
+  "Event data",  \
   "Commissioning led event control",  \
+  "Event data",  \
   "Find and Bind Initiator Plugin CheckTargetResponses",  \
   "Interpan Plugin FragmentReceive",  \
   "Interpan Plugin FragmentTransmit",  \
@@ -86,6 +126,14 @@
   "Scan Dispatch Plugin Scan",  \
   "Update TC Link Key Plugin BeginTcLinkKeyUpdate",  \
   "Finding and binding event control",  \
+  "Event data",  \
+  "Event data",  \
+  "Event data",  \
+  "Event data",  \
+  "Event data",  \
+  "Event data",  \
+  "Event data",  \
+  "Event data",  \
   "End Device Support Plugin Move NWK 0", \
   "End Device Support Plugin Polling NWK 0", \
 

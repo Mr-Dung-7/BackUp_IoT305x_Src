@@ -23,6 +23,7 @@
 #include "Source/Mid/Led/led-user.h"
 #include "Source/Mid/Si7020/TemHumSensor.h"
 #include "Source/Mid/Timer/timer-user.h"
+#include "Source/Mid/Usart/USART.h"
 
 /******************************************************************************/
 /*                                 DEFINEs                                    */
@@ -52,6 +53,7 @@ typedef enum
 void Main_NetworkHandle (NetworkState_e networkResult);
 void Main_ButtonPressHandle (uint8_t button, uint8_t pressCount);
 void Main_ButtonHoldHandle (uint8_t button, uint8_t holdCount);
+void Main_Usart2RxHandle (USART_STATE_e UsartStateRx);
 void Main_ReceiveLeaveHandle (EmberNodeId nodeId, RECEIVE_CMD_ID_e receiveId);
 
 /******************************************************************************/

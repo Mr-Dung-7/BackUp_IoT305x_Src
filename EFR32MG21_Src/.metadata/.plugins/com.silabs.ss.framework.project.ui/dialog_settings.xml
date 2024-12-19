@@ -2,6 +2,13 @@
 <section name="Workbench">
 	<section name="com.silabs.ss.framework.ide.project.core.cdtMbsProjectType">
 		<item value="LINK_LIBRARIES" key="settingImportModeOption"/>
+		<item value="LINK" key="importOption"/>
 		<item value="false" key="showInternal"/>
+		<list key="fileLocationHistory">
+			<item value="D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led"/>
+		</list>
+		<list key="fileLocations">
+			<item value="D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Led"/>
+		</list>
 	</section>
 </section>

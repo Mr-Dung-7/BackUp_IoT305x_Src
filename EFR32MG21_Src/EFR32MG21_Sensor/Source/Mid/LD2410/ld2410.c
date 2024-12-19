@@ -27,6 +27,9 @@ EmberEventControl Ld2410DetectEventControl;
 
 LD2410_State_e g_ld2410State = LD2410_STATE_DEBOUNCE;
 
+static uint8_t g_frame[50] = {0};
+static uint16_t g_length = 0;
+
 /******************************************************************************/
 /*                           FUNCTIONs  PROTOTYPE                             */
 /******************************************************************************/
@@ -223,6 +226,373 @@ void Ld2410DetectEventHandler (void)
 		default:
 			break;
 	}
+}
+
+/*
+ * @func:		LD2410_HeaderSendAndACK
+ *
+ * @brief:		Header cho ban tin commands va ACK
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+void LD2410_HeaderSendAndACK (void)
+{
+	g_frame[g_length++] = 0xFD;
+	g_frame[g_length++] = 0xFC;
+	g_frame[g_length++] = 0xFB;
+	g_frame[g_length++] = 0xFA;
+}
+
+/*
+ * @func:		LD2410_EndFrameSendAndACK
+ *
+ * @brief:		EndFrame cho ban tin commands va ACK
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+void LD2410_EndFrameSendAndACK (void)
+{
+	g_frame[g_length++] = 0x04;
+	g_frame[g_length++] = 0x03;
+	g_frame[g_length++] = 0x02;
+	g_frame[g_length++] = 0x01;
+}
+
+/*
+ * @func:		LD2410_FrameSetConfiguration
+ *
+ * @brief:		Frame Configuration
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+void LD2410_FrameSetConfiguration (uint8_t enable)
+{
+	if (enable == 1)
+	{
+		// Enable configuration command
+		g_length = 0;
+
+		LD2410_HeaderSendAndACK();
+
+		g_frame[g_length++] = 0x04;
+		g_frame[g_length++] = 0x00;
+
+		g_frame[g_length++] = 0xFF;
+		g_frame[g_length++] = 0x00;
+
+		g_frame[g_length++] = 0x01;
+		g_frame[g_length++] = 0x00;
+
+		LD2410_EndFrameSendAndACK();
+	}
+	else
+	{
+		// End configuration command
+		g_length = 0;
+
+		LD2410_HeaderSendAndACK();
+
+		g_frame[g_length++] = 0x02;
+		g_frame[g_length++] = 0x00;
+
+		g_frame[g_length++] = 0xFE;
+		g_frame[g_length++] = 0x00;
+
+		LD2410_EndFrameSendAndACK();
+	}
+
+	USART_SendFrame(g_frame, g_length);
+}
+
+/*
+ * @func:		LD2410_SetDistanceLatency
+ *
+ * @brief:		Ham cai dat gia tri khoang cach phat hien va do tre
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+void LD2410_SetDistanceLatency (uint8_t valueMovingDistance,	\
+								uint8_t valueRestingDistance,	\
+								uint8_t valueLatency)
+{
+	LD2410_FrameSetConfiguration(CONFIG_ENABLE);
+
+	g_length = 0;
+
+	LD2410_HeaderSendAndACK();
+
+	g_frame[g_length++] = 0x14;
+	g_frame[g_length++] = 0x00;
+
+	// Command word
+	g_frame[g_length++] = 0x60;
+	g_frame[g_length++] = 0x00;
+
+	// Moving distance
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+
+	g_frame[g_length++] = valueMovingDistance;
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+
+	// Resting distance
+	g_frame[g_length++] = 0x01;
+	g_frame[g_length++] = 0x00;
+
+	g_frame[g_length++] = valueRestingDistance;
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+
+	// Unmanned duration (Latency)
+	g_frame[g_length++] = 0x02;
+	g_frame[g_length++] = 0x00;
+
+	g_frame[g_length++] = valueLatency;
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+
+	LD2410_EndFrameSendAndACK();
+
+	USART_SendFrame(g_frame, g_length);
+
+	LD2410_FrameSetConfiguration(CONFIG_END);
+}
+
+/*
+ * @func:		LD2410_SetSensitivity
+ *
+ * @brief:		Ham cai dat gia tri do nhay
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+void LD2410_SetSensitivity (uint8_t valueMotionSensitivity, uint8_t valueStaticSensitivity)
+{
+	LD2410_FrameSetConfiguration(CONFIG_ENABLE);
+
+	g_length = 0;
+
+	LD2410_HeaderSendAndACK();
+
+	g_frame[g_length++] = 0x14;
+	g_frame[g_length++] = 0x00;
+
+	// Command word
+	g_frame[g_length++] = 0x64;
+	g_frame[g_length++] = 0x00;
+
+	// Distance gate
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+
+	g_frame[g_length++] = 0xFF;
+	g_frame[g_length++] = 0xFF;
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+
+	// Motion sensitivity
+	g_frame[g_length++] = 0x01;
+	g_frame[g_length++] = 0x00;
+
+	g_frame[g_length++] = valueMotionSensitivity;
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+
+	// Static sensitivity
+	g_frame[g_length++] = 0x02;
+	g_frame[g_length++] = 0x00;
+
+	g_frame[g_length++] = valueStaticSensitivity;
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+
+	LD2410_EndFrameSendAndACK();
+
+	USART_SendFrame(g_frame, g_length);
+
+	LD2410_FrameSetConfiguration(CONFIG_END);
+}
+
+/*
+ * @func:		LD2410_ReadParameterCommand
+ *
+ * @brief:		Frame Read parameter command
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+void LD2410_ReadParameterCommand (void)
+{
+	LD2410_FrameSetConfiguration(CONFIG_ENABLE);
+
+	g_length = 0;
+
+	LD2410_HeaderSendAndACK();
+
+	g_frame[g_length++] = 0x02;
+	g_frame[g_length++] = 0x00;
+
+	// Command word
+	g_frame[g_length++] = 0x61;
+	g_frame[g_length++] = 0x00;
+
+	LD2410_EndFrameSendAndACK();
+
+	USART_SendFrame(g_frame, g_length);
+
+	LD2410_FrameSetConfiguration(CONFIG_END);
+}
+
+/*
+ * @func:		LD2410_FrameAckDistanceLatency
+ *
+ * @brief:		Frame ACK khi SET gia tri Distance va Latency thanh cong
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+uint8_t* LD2410_FrameAckDistanceLatency (void)
+{
+	g_length = 0;
+
+	LD2410_HeaderSendAndACK();
+
+	g_frame[g_length++] = 0x04;
+	g_frame[g_length++] = 0x00;
+
+	g_frame[g_length++] = 0x60;
+	g_frame[g_length++] = 0x01;
+
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+
+	LD2410_EndFrameSendAndACK();
+
+	return g_frame;
+}
+
+/*
+ * @func:		LD2410_FrameAckSensitivity
+ *
+ * @brief:		Frame ACK khi SET gia tri Sensitivity thanh cong
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+uint8_t* LD2410_FrameAckSensitivity (void)
+{
+	g_length = 0;
+
+	LD2410_HeaderSendAndACK();
+
+	g_frame[g_length++] = 0x04;
+	g_frame[g_length++] = 0x00;
+
+	g_frame[g_length++] = 0x64;
+	g_frame[g_length++] = 0x01;
+
+	g_frame[g_length++] = 0x00;
+	g_frame[g_length++] = 0x00;
+
+	LD2410_EndFrameSendAndACK();
+
+	return g_frame;
+}
+
+/*
+ * @func:		LD2410_CompareFrameAckDistanceLatencyWithBuffer
+ *
+ * @brief:		Ham so sanh Frame ACK (trong buffer) khi SET gia tri Distance va Latency thanh cong voi frame ACK mac dinh tuong ung
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+uint8_t LD2410_CompareFrameAckDistanceLatencyWithBuffer (void)
+{
+	uint8_t difference = 1; 	// Mac dinh 2 khung truyen giong nhau
+	uint8_t *ackDistanceLatency = LD2410_FrameAckDistanceLatency();
+	uint8_t *frameRxBuffer = USART_GetFrame();
+	uint8_t length = USART_GetFrameLength();
+
+	for (uint8_t i = 0; i < length; i++)
+	{
+		if (*(frameRxBuffer + 4 + i) != *(ackDistanceLatency + 4 + i))
+		{
+			difference = 0;
+			return difference;
+		}
+	}
+
+	// Neu 2 khung truyen giong nhau
+	return difference;
+}
+
+/*
+ * @func:		LD2410_CompareFrameAckSensitivityWithBuffer
+ *
+ * @brief:		Ham so sanh Frame ACK (trong buffer) khi SET gia tri Sensitivity thanh cong voi frame ACK mac dinh tuong ung
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+uint8_t LD2410_CompareFrameAckSensitivityWithBuffer (void)
+{
+	uint8_t difference = 1; 	// Mac dinh 2 khung truyen giong nhau
+	uint8_t *ackSensitivity = LD2410_FrameAckSensitivity();
+	uint8_t *frameRxBuffer = USART_GetFrame();
+	uint8_t length = USART_GetFrameLength();
+
+	for (uint8_t i = 0; i < length; i++)
+	{
+		if (*(frameRxBuffer + 4 + i) != *(ackSensitivity + 4 + i))
+		{
+			difference = 0;
+			return difference;
+		}
+	}
+
+	// Neu 2 khung truyen giong nhau
+	return difference;
 }
 
 /* END FILE */

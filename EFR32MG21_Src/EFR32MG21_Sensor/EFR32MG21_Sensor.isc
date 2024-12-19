@@ -65,6 +65,7 @@ led1ToggleEventControl,led1ToggleEventHandler
 led2ToggleEventControl,led2ToggleEventHandler
 I2CSendDataEventControl,I2CSendDataEventHandler
 systemTimerEventControl,systemTimerEventHandler
+usart2ScanEventControl,usart2ScanEventHandler
 }
 {setupId:halOptions
 }

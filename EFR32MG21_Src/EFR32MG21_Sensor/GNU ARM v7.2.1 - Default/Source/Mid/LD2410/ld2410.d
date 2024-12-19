@@ -194,7 +194,8 @@ Source/Mid/LD2410/ld2410.o: ../Source/Mid/LD2410/ld2410.c \
  d:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\util\serial\command-interpreter2.h \
  d:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\cli\zcl-cli.h \
  D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/App/Send/send-user.h \
- D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/Led/led-user.h
+ D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/Led/led-user.h \
+ D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/Usart/USART.h
 
 D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/LD2410/ld2410.h:
 
@@ -587,3 +588,5 @@ d:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\
 D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/App/Send/send-user.h:
 
 D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/Led/led-user.h:
+
+D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/Usart/USART.h:

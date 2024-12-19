@@ -28,6 +28,7 @@ Source/Mid/LDR \
 Source/Mid/Led \
 Source/Mid/Si7020 \
 Source/Mid/Timer \
+Source/Mid/Usart \
 adc/EFR32 \
 aes-cmac \
 antenna-stub \

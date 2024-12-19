@@ -33,6 +33,7 @@
   extern EmberEventControl networkLeaveEventControl; \
   extern EmberEventControl scanButtonEventControl; \
   extern EmberEventControl systemTimerEventControl; \
+  extern EmberEventControl usart2ScanEventControl; \
   extern void I2CSendDataEventHandler(void); \
   extern void Ld2410DetectEventHandler(void); \
   extern void LdrEventHandler(void); \
@@ -54,6 +55,7 @@
   extern void networkLeaveEventHandler(void); \
   extern void scanButtonEventHandler(void); \
   extern void systemTimerEventHandler(void); \
+  extern void usart2ScanEventHandler(void); \
   static void networkEventWrapper(EmberEventControl *control, EmberAfNetworkEventHandler handler, uint8_t networkIndex) \
   { \
     emberAfPushNetworkIndex(networkIndex); \
@@ -105,6 +107,7 @@
   { &networkLeaveEventControl, networkLeaveEventHandler }, \
   { &scanButtonEventControl, scanButtonEventHandler }, \
   { &systemTimerEventControl, systemTimerEventHandler }, \
+  { &usart2ScanEventControl, usart2ScanEventHandler }, \
   { &emberAfPluginEndDeviceSupportMoveNetworkEventControls[0], emberAfPluginEndDeviceSupportMoveNetworkEventWrapper0 }, \
   { &emberAfPluginEndDeviceSupportPollingNetworkEventControls[0], emberAfPluginEndDeviceSupportPollingNetworkEventWrapper0 }, \
 
@@ -113,11 +116,11 @@
   "Identify Cluster Server EP 1",  \
   "Identify Cluster Server EP 2",  \
   "Identify Cluster Server EP 3",  \
-  "Event data",  \
-  "Event data",  \
-  "Event data",  \
+  "I2 c send data event control",  \
+  "Ld2410 detect event control",  \
+  "Ldr event control",  \
   "Commissioning led event control",  \
-  "Event data",  \
+  "Delay event control",  \
   "Find and Bind Initiator Plugin CheckTargetResponses",  \
   "Interpan Plugin FragmentReceive",  \
   "Interpan Plugin FragmentTransmit",  \
@@ -126,13 +129,14 @@
   "Scan Dispatch Plugin Scan",  \
   "Update TC Link Key Plugin BeginTcLinkKeyUpdate",  \
   "Finding and binding event control",  \
-  "Event data",  \
-  "Event data",  \
-  "Event data",  \
-  "Event data",  \
-  "Event data",  \
-  "Event data",  \
-  "Event data",  \
+  "Join network event control",  \
+  "Keep alive event control",  \
+  "Led1 toggle event control",  \
+  "Led2 toggle event control",  \
+  "Main state event control",  \
+  "Network leave event control",  \
+  "Scan button event control",  \
+  "System timer event control",  \
   "Event data",  \
   "End Device Support Plugin Move NWK 0", \
   "End Device Support Plugin Polling NWK 0", \

@@ -202,6 +202,7 @@ Source/App/Main/main-sensor.o: ../Source/App/Main/main-sensor.c \
  D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/Timer/timer-user.h \
  D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/Kalman-Filter/kalman_filter.h \
  D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/LD2410/ld2410.h \
+ D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/Usart/USART.h \
  D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/LDR/ldr-user.h \
  d:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_chip.h \
  d:\siliconlabs\simplicitystudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_system.h \
@@ -616,6 +617,8 @@ D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Sourc
 D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/Kalman-Filter/kalman_filter.h:
 
 D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/LD2410/ld2410.h:
+
+D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/Usart/USART.h:
 
 D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_Sensor/Source/Mid/LDR/ldr-user.h:
 

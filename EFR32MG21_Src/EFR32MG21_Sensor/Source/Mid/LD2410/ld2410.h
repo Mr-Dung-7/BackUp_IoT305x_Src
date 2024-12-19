@@ -14,6 +14,7 @@
 #include "app/framework/include/af.h"
 #include "Source/App/Send/send-user.h"
 #include "Source/Mid/Led/led-user.h"
+#include "Source/Mid/Usart/USART.h"
 
 /******************************************************************************/
 /*                               DEFINEs                              		  */
@@ -24,6 +25,8 @@
 
 #define ENDPOINT_3				3
 
+#define CONFIG_ENABLE			1
+#define CONFIG_END				0
 /******************************************************************************/
 /*                            STRUCTs AND ENUMs                               */
 /******************************************************************************/
@@ -53,7 +56,18 @@ void LD2410_Enable (boolean en);
 boolean LD2410_isMotionSignal (void);
 void LD2410_INTSignalHandle (uint8_t intNo);
 void LD2410_Handle (LD2410_Action_e action);
-
+void LD2410_HeaderSendAndACK (void);
+void LD2410_EndFrameSendAndACK (void);
+void LD2410_FrameSetConfiguration (uint8_t enable);
+void LD2410_SetDistanceLatency (uint8_t valueMovingDistance,	\
+								uint8_t valueRestingDistance,	\
+								uint8_t valueLatency);
+void LD2410_SetSensitivity (uint8_t valueMotionSensitivity, uint8_t valueStaticSensitivity);
+void LD2410_ReadParameterCommand (void);
+uint8_t* LD2410_FrameAckDistanceLatency (void);
+uint8_t* LD2410_FrameAckSensitivity (void);
+uint8_t LD2410_CompareFrameAckDistanceLatencyWithBuffer (void);
+uint8_t LD2410_CompareFrameAckSensitivityWithBuffer (void);
 
 /******************************************************************************/
 /*                               FUNCTIONs                              	  */
