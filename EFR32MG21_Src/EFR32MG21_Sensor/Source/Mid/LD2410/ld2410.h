@@ -19,14 +19,17 @@
 /******************************************************************************/
 /*                               DEFINEs                              		  */
 /******************************************************************************/
-#define LD2410_PORT				gpioPortC
-#define LD2410_PIN				(3U)
-#define LD2410_EXTI_CHANNEL		(LD2410_PIN)
+#define LD2410_PORT						gpioPortC
+#define LD2410_PIN						(3U)
+#define LD2410_EXTI_CHANNEL				(LD2410_PIN)
 
-#define ENDPOINT_3				3
+#define ENDPOINT_3						3
 
-#define CONFIG_ENABLE			1
-#define CONFIG_END				0
+#define CONFIG_ENABLE					1
+#define CONFIG_END						0
+
+#define LD2410_SKIP_HEADER				4
+#define LD2410_INDEX_START_FRAME_ACK	18
 /******************************************************************************/
 /*                            STRUCTs AND ENUMs                               */
 /******************************************************************************/
@@ -68,6 +71,7 @@ uint8_t* LD2410_FrameAckDistanceLatency (void);
 uint8_t* LD2410_FrameAckSensitivity (void);
 uint8_t LD2410_CompareFrameAckDistanceLatencyWithBuffer (void);
 uint8_t LD2410_CompareFrameAckSensitivityWithBuffer (void);
+void LD2410_SetValueSuccess (void);
 
 /******************************************************************************/
 /*                               FUNCTIONs                              	  */

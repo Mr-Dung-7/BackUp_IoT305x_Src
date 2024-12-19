@@ -257,24 +257,35 @@ void Main_ButtonPressHandle (uint8_t button, uint8_t pressCount)
 	{
 		switch(pressCount)
 		{
+			case press_1:
+			{
+				emberAfCorePrintln("SW1_press_1");
+//				LD2410_SetDistanceLatency(0x03, 0x04, 0x05);
+//				LD2410_SetSensitivity(0x06, 0x07);
+//				toggleLed(LED_1, PINK, 2, 300, 300);
+				break;
+			}
 			case press_2:
 			{
 				NETWORK_FindAndJoin();
 				emberAfCorePrintln("SW1_press_2");
-			} break;
+				break;
+			}
 
 			case press_3:
 			{
 				emberAfPluginFindAndBindInitiatorStart(3);
 				emberAfCorePrintln("SW1_press_3");
-			} break;
+				break;
+			}
 
 			case press_5:
 			{
 				g_systemState = LEAVE_NETWORK;
 				emberEventControlSetActive(mainStateEventControl);
 				emberAfCorePrintln("SW1_press_5");
-			} break;
+				break;
+			}
 
 			default:
 				break;
@@ -285,18 +296,10 @@ void Main_ButtonPressHandle (uint8_t button, uint8_t pressCount)
 		switch(pressCount)
 		{
 			case press_1:
-			{
-				emberAfCorePrintln("SW2_press_1");
-				LD2410_SetDistanceLatency(0x03, 0x04, 0x05);
-				toggleLed(LED_1, PINK, 2, 300, 300);
-			} break;
+				break;
 
 			case press_2:
-			{
-				emberAfCorePrintln("SW2_press_2");
-				LD2410_SetSensitivity(0x07, 0x08);
-				toggleLed(LED_1, PINK, 2, 300, 300);
-			} break;
+				break;
 
 			default:
 				break;
@@ -410,18 +413,21 @@ void Main_Usart2RxHandle (USART_STATE_e UsartStateRx)
 			}
 
 			case USART_STATE_DATA_RECEIVED:
-				break;
-
-			case USART_STATE_ACK_RECEIVED:
 			{
-				emberAfCorePrintln("USART_STATE_ACK_RECEIVED\n");
-				USART_ReceivedData();
+				emberAfCorePrintln("USART_STATE_DATA_RECEIVED\n");
 				break;
 			}
 
 			case USART_STATE_DATA_ERROR:
 			{
 				emberAfCorePrintln("USART_STATE_DATA_ERROR\n");
+				break;
+			}
+
+			case USART_STATE_ACK_RECEIVED:
+			{
+				emberAfCorePrintln("USART_STATE_ACK_RECEIVED\n");
+				LD2410_SetValueSuccess();
 				break;
 			}
 

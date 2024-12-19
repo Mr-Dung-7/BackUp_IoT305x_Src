@@ -82,7 +82,7 @@ void usart2ScanEventHandler (void)
 {
 	emberEventControlSetInactive(usart2ScanEventControl);
 
-	uint8_t 	dataByte;
+	uint8_t 	dataByte = 0;
 	uint16_t 	bytesReceived = 0;        // Variable storing the number of received bytes
 
 	// Get the number of received bytes
@@ -90,15 +90,26 @@ void usart2ScanEventHandler (void)
 
 	if(numOfByteAvail > 0)
 	{
-		while (numOfByteAvail > 0 && bytesReceived < RX_BUFFER_SIZE)
+		// Tim byte Start (0xFD)
+		while(dataByte != 0xFD && numOfByteAvail > 0)
 		{
 			emberSerialReadByte(COM_USART2, &dataByte);
-
-			g_strRxBuffer[bytesReceived++] = dataByte;		// Store the received byte in the buffer
 			numOfByteAvail--;
 		}
 
-		processSerialHandle();
+		if(numOfByteAvail > 0 && dataByte == 0xFD)
+		{
+			g_strRxBuffer[bytesReceived++] = dataByte;		// Store the received byte in the buffer
+
+			while (numOfByteAvail > 0 && bytesReceived < RX_BUFFER_SIZE)
+			{
+				emberSerialReadByte(COM_USART2, &dataByte);
+				g_strRxBuffer[bytesReceived++] = dataByte;
+				numOfByteAvail--;
+			}
+
+			processSerialHandle();
+		}
 	}
 
 	emberEventControlSetDelayMS(usart2ScanEventControl, USART_PROCESS_SERIAL_INTERVAL);
@@ -138,7 +149,8 @@ void processSerialHandle (void)
  */
 uint8_t PollRxBuff (uint8_t port)
 {
-	g_IndexRxBuf = 0;
+	g_byUartState = USART_STATE_IDLE;
+	g_IndexRxBuf = LD2410_INDEX_START_FRAME_ACK;
 
 	while ((port == COM_USART2) && (g_byUartState == USART_STATE_IDLE))
 	{
@@ -153,7 +165,6 @@ uint8_t PollRxBuff (uint8_t port)
 				{
 					g_IndexRxBuf++;
 					g_RxBufState = RX_STATE_DATA_BYTES;
-					g_strRxBuffer[g_IndexRxBuf++] = byRxData;
 				}
 				else
 				{
@@ -167,14 +178,7 @@ uint8_t PollRxBuff (uint8_t port)
 			{
 				if (g_IndexRxBuf < RX_BUFFER_SIZE)
 				{
-					if (g_IndexRxBuf == *(g_strRxBuffer + 1))		// g_IndexRxBuf == FRAME_LENGTH
-					{
-						g_RxBufState = RX_STATE_CXOR_BYTE;
-					}
-
-					g_IndexRxBuf++;
-
-					if(g_IndexRxBuf > 4 &&
+					if(g_IndexRxBuf > LD2410_INDEX_START_FRAME_ACK + LD2410_SKIP_HEADER &&
 					   g_strRxBuffer[g_IndexRxBuf - 4] == 0x04 &&
 					   g_strRxBuffer[g_IndexRxBuf - 3] == 0x03 &&
 					   g_strRxBuffer[g_IndexRxBuf - 2] == 0x02 &&
@@ -183,6 +187,8 @@ uint8_t PollRxBuff (uint8_t port)
 						g_RxBufState = RX_STATE_START_BYTE;
 						g_byUartState = USART_STATE_ACK_RECEIVED;
 					}
+
+					g_IndexRxBuf++;
 				}
 				else
 				{
@@ -215,7 +221,7 @@ uint8_t PollRxBuff (uint8_t port)
  */
 uint8_t* USART_GetFrame (void)
 {
-	return g_strRxBuffer;
+	return g_strRxBuffer + LD2410_INDEX_START_FRAME_ACK;
 }
 
 /*
@@ -231,7 +237,7 @@ uint8_t* USART_GetFrame (void)
  */
 uint8_t USART_GetFrameLength(void)
 {
-	return g_strRxBuffer[4];
+	return g_strRxBuffer[LD2410_INDEX_START_FRAME_ACK + LD2410_SKIP_HEADER];
 }
 
 /*
@@ -249,29 +255,6 @@ uint8_t USART_GetFrameLength(void)
 void USART_SendFrame (uint8_t* frame, uint16_t length)
 {
 	emberSerialWriteData(COM_USART2, frame, length);
-}
-
-/*
- * @func:  		USART_ReceivedData
- *
- * @brief:
- *
- * @param:		None
- *
- * @retval:		None
- *
- * @note:		None
- */
-void USART_ReceivedData (void)
-{
-	uint8_t AckDistanceLatencySuccess = LD2410_CompareFrameAckDistanceLatencyWithBuffer();
-	uint8_t AckSensitivitySuccess = LD2410_CompareFrameAckSensitivityWithBuffer();
-
-	if (AckDistanceLatencySuccess == 1 || AckSensitivitySuccess == 1)
-	{
-		// Nhay Led
-		toggleLed(LED_1, PINK, 2, 300, 300);
-	}
 }
 
 /* END FILE */

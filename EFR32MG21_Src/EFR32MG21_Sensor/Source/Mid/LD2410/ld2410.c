@@ -53,7 +53,7 @@ void LD2410_Init (void)
 {
 	CMU_ClockEnable(cmuClock_GPIO, true);
 
-	GPIO_PinModeSet(LD2410_PORT, LD2410_PIN, gpioModeInput, 1);
+	GPIO_PinModeSet(LD2410_PORT, LD2410_PIN, gpioModeInputPull, 1);
 
 	// Register callbacks before setting up and enabling pin interrupt
 	GPIOINT_CallbackRegister(LD2410_EXTI_CHANNEL, LD2410_INTSignalHandle);
@@ -553,7 +553,7 @@ uint8_t LD2410_CompareFrameAckDistanceLatencyWithBuffer (void)
 
 	for (uint8_t i = 0; i < length; i++)
 	{
-		if (*(frameRxBuffer + 4 + i) != *(ackDistanceLatency + 4 + i))
+		if (*(frameRxBuffer + LD2410_SKIP_HEADER + i) != *(ackDistanceLatency + LD2410_SKIP_HEADER + i))
 		{
 			difference = 0;
 			return difference;
@@ -584,7 +584,7 @@ uint8_t LD2410_CompareFrameAckSensitivityWithBuffer (void)
 
 	for (uint8_t i = 0; i < length; i++)
 	{
-		if (*(frameRxBuffer + 4 + i) != *(ackSensitivity + 4 + i))
+		if (*(frameRxBuffer + LD2410_SKIP_HEADER + i) != *(ackSensitivity + LD2410_SKIP_HEADER + i))
 		{
 			difference = 0;
 			return difference;
@@ -593,6 +593,29 @@ uint8_t LD2410_CompareFrameAckSensitivityWithBuffer (void)
 
 	// Neu 2 khung truyen giong nhau
 	return difference;
+}
+
+/*
+ * @func:  		LD2410_SetValueSuccess
+ *
+ * @brief:
+ *
+ * @param:		None
+ *
+ * @retval:		None
+ *
+ * @note:		None
+ */
+void LD2410_SetValueSuccess (void)
+{
+	uint8_t AckDistanceLatencySuccess = LD2410_CompareFrameAckDistanceLatencyWithBuffer();
+	uint8_t AckSensitivitySuccess = LD2410_CompareFrameAckSensitivityWithBuffer();
+
+	if (AckDistanceLatencySuccess == 1 || AckSensitivitySuccess == 1)
+	{
+		toggleLed(LED_1, PINK, 2, 300, 300);
+		emberAfCorePrintln("Blink pink led");
+	}
 }
 
 /* END FILE */

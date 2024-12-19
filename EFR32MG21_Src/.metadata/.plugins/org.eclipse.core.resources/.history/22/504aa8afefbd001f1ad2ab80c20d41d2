@@ -62,20 +62,14 @@ void emberAfMainInitCallback (void)
 	emberAfCorePrintln("emberAfMainInitCallback");
 
 	NETWORK_Init(Main_NetworkHandle);
-
 	RECEIVE_Init(Main_ReceiveLeaveHandle);
-
 	Button_Init(Main_ButtonPressHandle, Main_ButtonHoldHandle);
-
 	LD2410_Init();
-
 	LDR_Init();
-
 	led_Init();
-
 	Si7020_Init();
-
 	Timer_Init(10);
+	USART2_Init(Main_Usart2RxHandle);
 
 	g_systemState = POWER_ON_STATE;
 
@@ -263,24 +257,34 @@ void Main_ButtonPressHandle (uint8_t button, uint8_t pressCount)
 	{
 		switch(pressCount)
 		{
+			case press_1:
+			{
+				emberAfCorePrintln("SW1_press_1");
+				LD2410_SetDistanceLatency(0x03, 0x04, 0x05);
+//				toggleLed(LED_1, PINK, 2, 300, 300);
+				break;
+			}
 			case press_2:
 			{
 				NETWORK_FindAndJoin();
 				emberAfCorePrintln("SW1_press_2");
-			} break;
+				break;
+			}
 
 			case press_3:
 			{
 				emberAfPluginFindAndBindInitiatorStart(3);
 				emberAfCorePrintln("SW1_press_3");
-			} break;
+				break;
+			}
 
 			case press_5:
 			{
 				g_systemState = LEAVE_NETWORK;
 				emberEventControlSetActive(mainStateEventControl);
 				emberAfCorePrintln("SW1_press_5");
-			} break;
+				break;
+			}
 
 			default:
 				break;
@@ -291,14 +295,10 @@ void Main_ButtonPressHandle (uint8_t button, uint8_t pressCount)
 		switch(pressCount)
 		{
 			case press_1:
-			{
-
-			} break;
+				break;
 
 			case press_2:
-			{
-
-			} break;
+				break;
 
 			default:
 				break;
@@ -385,6 +385,59 @@ boolean emberAfPreCommandReceivedCallback (EmberAfClusterCommand* cmd)
 //	}
 
 	return false;
+}
+
+/*
+ * @func:  		Main_Usart2RxHandle
+ *
+ * @brief:		The function executes the event upon receiving the corresponding message
+ * 				in the specified format
+ *
+ * @param:		UsartStateRx - Received status
+ *
+ * @retval:		None
+ *
+ * @note:		Receive control messages from the Web Server (ESP32)
+ */
+void Main_Usart2RxHandle (USART_STATE_e UsartStateRx)
+{
+	if (UsartStateRx != USART_STATE_IDLE)
+	{
+		switch (UsartStateRx)
+		{
+			case USART_STATE_EMPTY:
+			{
+				emberAfCorePrintln("USART_STATE_EMPTY\n");
+				break;
+			}
+
+			case USART_STATE_DATA_RECEIVED:
+				break;
+
+			case USART_STATE_ACK_RECEIVED:
+			{
+				emberAfCorePrintln("USART_STATE_ACK_RECEIVED\n");
+				USART_ReceivedData();
+				break;
+			}
+
+			case USART_STATE_DATA_ERROR:
+			{
+				emberAfCorePrintln("USART_STATE_DATA_ERROR\n");
+				break;
+			}
+
+			case USART_STATE_ERROR:
+			case USART_STATE_RX_TIMEOUT:
+			{
+				emberAfCorePrintln("USART_STATE_ERROR_OR_RX_TIMEOUT\n");
+				break;
+			}
+
+			default:
+				break;
+		}
+	}
 }
 
 /*
