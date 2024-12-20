@@ -62,7 +62,7 @@ void emberAfMainInitCallback (void)
 	emberAfCorePrintln("emberAfMainInitCallback");
 
 	NETWORK_Init(Main_NetworkHandle);
-	RECEIVE_Init(Main_ReceiveLeaveHandle);
+	RECEIVE_Init(Main_ReceiveHandle);
 	Button_Init(Main_ButtonPressHandle, Main_ButtonHoldHandle);
 	LD2410_Init();
 	LDR_Init();
@@ -296,6 +296,7 @@ void Main_ButtonPressHandle (uint8_t button, uint8_t pressCount)
 		switch(pressCount)
 		{
 			case press_1:
+				emberAfCorePrintln("SW2_press_1");
 				break;
 
 			case press_2:
@@ -343,49 +344,6 @@ void Main_ButtonHoldHandle (uint8_t button, uint8_t holdCount)
 				break;
 		}
 	}
-}
-
-/*
- * @func:		emberAfPreCommandReceivedCallback
- *
- * @brief:		The function handles incoming messages
- *
- * @params:		cmd - Pointer to the received command
- *
- * @retVal:		true / false
- *
- * @note:		None
- */
-boolean emberAfPreCommandReceivedCallback (EmberAfClusterCommand* cmd)
-{
-//	bool 		commandID = cmd -> commandId;
-//	uint16_t 	clusterID = cmd -> apsFrame -> clusterId;
-//	uint8_t 	desEndpoint = cmd -> apsFrame -> destinationEndpoint;
-//
-//	switch(cmd->type)
-//	{
-//		case EMBER_INCOMING_UNICAST:
-//		{
-//			if (clusterID == ZCL_ON_OFF_CLUSTER_ID)
-//			{
-//				SEND_ResendZclCommandViaBinding(desEndpoint, desEndpoint, commandID, cmd->source);
-//				return true;
-//			}
-//		} break;
-//
-//		case EMBER_INCOMING_MULTICAST:
-//		{
-//			if (clusterID == ZCL_ON_OFF_CLUSTER_ID)
-//			{
-//				return true;
-//			}
-//		} break;
-//
-//		default:
-//			break;
-//	}
-
-	return false;
 }
 
 /*
@@ -456,7 +414,8 @@ void Main_Usart2RxHandle (USART_STATE_e UsartStateRx)
  *
  * @note:		None
  */
-void Main_ReceiveLeaveHandle (EmberNodeId nodeId, RECEIVE_CMD_ID_e receiveId)
+void Main_ReceiveHandle (EmberNodeId nodeId, RECEIVE_CMD_ID_e receiveId, 	\
+						 uint8_t *payload, uint8_t payloadLength)
 {
 	switch (receiveId)
 	{

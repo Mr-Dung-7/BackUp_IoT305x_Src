@@ -46,7 +46,7 @@
 #define CHANGE_VALUE_TEMP		2
 #define CHANGE_VALUE_HUMI		2
 
-#define PERIOD_UPDATE_TO_ZC		5000
+#define PERIOD_UPDATE_TO_HC		5000
 
 /******************************************************************************/
 /*                            STRUCTs AND ENUMs                               */

@@ -23,7 +23,7 @@
 /******************************************************************************/
 /*                       EVENTs AND GLOBAL VARIABLEs                          */
 /******************************************************************************/
-static pReceiveHandler receiveHandler = NULL;
+static pReceiveHandler g_receiveHandler = NULL;
 
 /******************************************************************************/
 /*                           FUNCTIONs  PROTOTYPE                             */
@@ -46,50 +46,7 @@ static pReceiveHandler receiveHandler = NULL;
  */
 void RECEIVE_Init (pReceiveHandler callback)
 {
-	receiveHandler = callback;
-}
-
-/*
- * @func:		Receive_OnOffClusterHandle
- *
- * @brief:		The function executes ZCL on/off
- *
- * @params:		cmd - Pointer to the received command
- *
- * @retVal:		None
- *
- * @note:		None
- */
-void RECEIVE_OnOffClusterHandle (EmberAfClusterCommand* cmd)
-{
-	uint8_t commandID = cmd -> commandId;
-	uint8_t desEndpoint = cmd -> apsFrame -> destinationEndpoint;
-
-	switch(commandID)
-	{
-		case ZCL_ON_COMMAND_ID:
-		{
-			if (desEndpoint == ENDPOINT_1)
-			{
-				led_turnOn(LED_1, BLUE);
-			}
-
-			SEND_OnOffStateReport(desEndpoint, 1);
-		} break;
-
-		case ZCL_OFF_COMMAND_ID:
-		{
-			if (desEndpoint == ENDPOINT_1)
-			{
-				led_turnOff(LED_1);
-			}
-
-			SEND_OnOffStateReport(desEndpoint, 0);
-		} break;
-
-		default:
-			break;
-	}
+	g_receiveHandler = callback;
 }
 
 /*
@@ -106,6 +63,47 @@ void RECEIVE_OnOffClusterHandle (EmberAfClusterCommand* cmd)
  */
 boolean emberAfPreMessageReceivedCallback (EmberAfIncomingMessage* incommingMessage)
 {
+	return false;
+}
+
+/*
+ * @func:		emberAfPreCommandReceivedCallback
+ *
+ * @brief:		The function handles incoming messages
+ *
+ * @params:		cmd - Pointer to the received command
+ *
+ * @retVal:		true / false
+ *
+ * @note:		None
+ */
+boolean emberAfPreCommandReceivedCallback (EmberAfClusterCommand* cmd)
+{
+	EmberNodeId nodeId = cmd->source;
+	uint16_t clusterID = cmd->apsFrame->clusterId;
+	uint8_t commandID = cmd->commandId;
+	uint16_t attrID = (uint16_t)(cmd->buffer[cmd->payloadStartIndex] | cmd->buffer[cmd->payloadStartIndex + 1] << 8);
+	uint16_t bufIndex = cmd->payloadStartIndex + 4; 	// buffer payload start index
+//	uint8_t 	desEndpoint = cmd -> apsFrame -> destinationEndpoint;
+
+	// Su dung dieu kien Switch la gi?
+	// Su dung case nao
+//	switch()
+//	{
+//		case EMBE:
+//		{
+//			break;
+//		}
+//
+//		case EMBER:
+//		{
+//			break;
+//		}
+//
+//		default:
+//			break;
+//	}
+
 	return false;
 }
 
@@ -134,9 +132,9 @@ bool emberAfPreZDOMessageReceivedCallback (EmberNodeId emberNodeId,
 		{
 			case LEAVE_RESPONSE:
 			{
-				if (receiveHandler)
+				if (g_receiveHandler)
 				{
-					receiveHandler(emberNodeId, DEVICE_LEAVE_NETWORK);
+					g_receiveHandler(emberNodeId, DEVICE_LEAVE_NETWORK, NULL, 0);
 				}
 				return true;
 			} break;

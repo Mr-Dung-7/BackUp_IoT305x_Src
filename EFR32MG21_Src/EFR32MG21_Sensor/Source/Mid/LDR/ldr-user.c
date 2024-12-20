@@ -149,9 +149,11 @@ void LDR_Read (uint32_t *luxValue)
 void LDR_UpdateValueLight (void)
 {
 	static float luxCurEst = 0;
+	static uint8_t countLight = 0;
 	static uint32_t prevLux = 0;
-
 	uint32_t currentLux;
+
+	countLight++;
 
 	// Get light intensity value
 	LDR_Read(&currentLux);
@@ -159,27 +161,34 @@ void LDR_UpdateValueLight (void)
 	// Filter noise from the measured value
 	currentLux = (uint32_t)KalmanFilter(&luxCurEst,
 									   (float)currentLux,
-									   MEASURE_NOISE_INIT,
-									   PROCESS_NOISE_INIT);
+									    MEASURE_NOISE_INIT,
+									    PROCESS_NOISE_INIT);
 
-	/* Update the light intensity value if there is a great change, every 60 seconds */
-	if (((currentLux > prevLux) && (currentLux - prevLux >= THRESHOLD_LUX_REPORT)) 	||
-		((currentLux < prevLux) && (prevLux - currentLux >= THRESHOLD_LUX_REPORT)))
+	// Update light intensity value to PC every 5 seconds
+	if (countLight >= PERIOD_UPDATE_TO_HC / 1000)
+	{
+		SEND_LDRValueReport(ENDPOINT_2, currentLux);
+//		emberAfCorePrintln("Light: %"PRIu32" Lux", currentLux);
+
+		countLight = 0;
+	}
+
+	/* Update the light intensity value if there is a great change */
+	if (((currentLux > prevLux) && (currentLux - prevLux >= CHANGE_VALUE_LIGHT)) 	||
+		((currentLux < prevLux) && (prevLux - currentLux >= CHANGE_VALUE_LIGHT)))
 	{
 		SEND_LDRValueReport(ENDPOINT_2, currentLux);
 //		emberAfCorePrintln("Light: %"PRIu32" Lux", currentLux);
 	}
 
-	if (currentLux >= THRESHOLD_LUX_CONTROL_LED)
-	{
-		led_turnOn(LED_2, GREEN);
-		SEND_LDRValueReport(ENDPOINT_2, currentLux);
-	}
-	else
-	{
-		led_turnOff(LED_2);
-		SEND_LDRValueReport(ENDPOINT_2, currentLux);
-	}
+//	if (currentLux >= THRESHOLD_LUX_CONTROL_LED)
+//	{
+//		led_turnOn(LED_2, GREEN);
+//	}
+//	else
+//	{
+//		led_turnOff(LED_2);
+//	}
 
 	prevLux = currentLux;
 }
@@ -201,7 +210,7 @@ void LdrEventHandler (void)
 
 	LDR_UpdateValueLight();
 
-	emberEventControlSetDelayMS(LdrEventControl, 1000 * 60);
+	emberEventControlSetDelayMS(LdrEventControl, 1000);
 }
 
 /* END_FILE */

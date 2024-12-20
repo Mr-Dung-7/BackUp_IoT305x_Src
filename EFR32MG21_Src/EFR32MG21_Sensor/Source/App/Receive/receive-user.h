@@ -35,13 +35,13 @@ typedef enum
 /******************************************************************************/
 /*                       EVENTs AND GLOBAL VARIABLEs                          */
 /******************************************************************************/
-typedef void (*pReceiveHandler)(EmberNodeId nodeID, RECEIVE_CMD_ID_e receiveId);
+typedef void (*pReceiveHandler)(EmberNodeId nodeID, RECEIVE_CMD_ID_e receiveId,	\
+								uint8_t *payload, uint8_t payloadLength);
 
 /******************************************************************************/
 /*                           FUNCTIONs  PROTOTYPE                             */
 /******************************************************************************/
 void RECEIVE_Init (pReceiveHandler callback);
-void RECEIVE_OnOffClusterHandle (EmberAfClusterCommand* cmd);
 
 /******************************************************************************/
 /*                               FUNCTIONs                              	  */

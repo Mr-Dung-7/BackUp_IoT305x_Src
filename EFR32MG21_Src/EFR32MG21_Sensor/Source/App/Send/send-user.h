@@ -42,17 +42,17 @@ void SEND_FillBufferGlobalCommand (EmberAfClusterId clusterId,
 								   uint8_t length,
 								   uint8_t dataType);
 void SEND_SendCommandUnicast (EmberNodeId nodeId, uint8_t sourceEp, uint8_t desEp);
-void SEND_LeaveResponse (void);
 void SEND_ReportInfoToHC (void);
-void SEND_KeepAliveToZc (void);
-void SEND_OnOffStateReport (uint8_t sourceEP, uint8_t state);
-void SEND_LevelStateReport (uint8_t sourceEP, uint8_t value);
 void SEND_TempValueReport (uint8_t sourceEp, uint8_t value);
 void SEND_HumiValueReport (uint8_t sourceEp, uint8_t value);
 void SEND_LDRValueReport (uint8_t sourceEp, uint16_t value);
 void SEND_LD2410StateReport (uint8_t sourceEP, uint8_t value);
+void SEND_OnOffStateReport (uint8_t sourceEP, uint8_t state);
+void SEND_LevelStateReport (uint8_t sourceEP, uint8_t value);
 void SEND_ResendZclCommandViaBinding (uint8_t localEndpoint, uint8_t remoteEndpoint,
 									  bool value, uint16_t nodeID);
+void SEND_KeepAliveToZc (void);
+void SEND_LeaveResponse (void);
 
 /******************************************************************************/
 /*                               FUNCTIONs                              	  */

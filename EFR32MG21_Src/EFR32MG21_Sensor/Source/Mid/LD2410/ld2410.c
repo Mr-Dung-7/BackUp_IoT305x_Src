@@ -146,33 +146,33 @@ void LD2410_INTSignalHandle (uint8_t intNo)
  */
 void LD2410_Handle (LD2410_Action_e action)
 {
-	static boolean sendFlag = true;
-
-	switch(action)
-	{
-		case LD2410_MOTION:
-		{
-			if(sendFlag)
-			{
-				sendFlag = false;
-				SEND_LD2410StateReport(ENDPOINT_3, LD2410_MOTION);
-				SEND_ResendZclCommandViaBinding(ENDPOINT_3, 1, 1, emberAfGetNodeId());
-			}
-
-			led_turnOn(LED_2, CYAN);
-		} break;
-
-		case LD2410_UNMOTION:
-		{
-			sendFlag = true;
-			led_turnOff(LED_2);
-			SEND_LD2410StateReport(ENDPOINT_3, LD2410_UNMOTION);
-			SEND_ResendZclCommandViaBinding(ENDPOINT_3, 1, 0, emberAfGetNodeId());
-		} break;
-
-		default:
-			break;
-	}
+//	static boolean sendFlag = true;
+//
+//	switch(action)
+//	{
+//		case LD2410_MOTION:
+//		{
+//			if(sendFlag)
+//			{
+//				sendFlag = false;
+//				SEND_LD2410StateReport(ENDPOINT_3, LD2410_MOTION);
+//				SEND_ResendZclCommandViaBinding(ENDPOINT_3, 1, 1, emberAfGetNodeId());
+//			}
+//
+//			led_turnOn(LED_2, CYAN);
+//		} break;
+//
+//		case LD2410_UNMOTION:
+//		{
+//			sendFlag = true;
+//			led_turnOff(LED_2);
+//			SEND_LD2410StateReport(ENDPOINT_3, LD2410_UNMOTION);
+//			SEND_ResendZclCommandViaBinding(ENDPOINT_3, 1, 0, emberAfGetNodeId());
+//		} break;
+//
+//		default:
+//			break;
+//	}
 }
 
 /*
@@ -188,44 +188,44 @@ void LD2410_Handle (LD2410_Action_e action)
  */
 void Ld2410DetectEventHandler (void)
 {
-	emberEventControlSetInactive(Ld2410DetectEventControl);
-
-	switch(g_ld2410State)
-	{
-		case LD2410_STATE_DEBOUNCE:
-		{
-			if (LD2410_isMotionSignal())
-			{
-				emberAfCorePrintln("LD2410_DETECT_MOTION");
-				g_ld2410State = LD2410_STATE_WAIT_5S;
-
-				LD2410_Handle(LD2410_MOTION);
-
-				emberEventControlSetDelayMS(Ld2410DetectEventControl, 5000);
-			}
-			else
-			{
-				LD2410_Enable(true);
-			}
-		} break;
-
-		case LD2410_STATE_WAIT_5S:
-		{
-			g_ld2410State = LD2410_STATE_WAIT_30S;
-			LD2410_Enable(true);
-
-			emberEventControlSetDelayMS(Ld2410DetectEventControl, 30000);
-		} break;
-
-		case LD2410_STATE_WAIT_30S:
-		{
-			emberAfCorePrintln("LD2410_DETECT_UNMOTION");
-			LD2410_Handle(LD2410_UNMOTION);
-		} break;
-
-		default:
-			break;
-	}
+//	emberEventControlSetInactive(Ld2410DetectEventControl);
+//
+//	switch(g_ld2410State)
+//	{
+//		case LD2410_STATE_DEBOUNCE:
+//		{
+//			if (LD2410_isMotionSignal())
+//			{
+//				emberAfCorePrintln("LD2410_DETECT_MOTION");
+//				g_ld2410State = LD2410_STATE_WAIT_5S;
+//
+//				LD2410_Handle(LD2410_MOTION);
+//
+//				emberEventControlSetDelayMS(Ld2410DetectEventControl, 5000);
+//			}
+//			else
+//			{
+//				LD2410_Enable(true);
+//			}
+//		} break;
+//
+//		case LD2410_STATE_WAIT_5S:
+//		{
+//			g_ld2410State = LD2410_STATE_WAIT_30S;
+//			LD2410_Enable(true);
+//
+//			emberEventControlSetDelayMS(Ld2410DetectEventControl, 30000);
+//		} break;
+//
+//		case LD2410_STATE_WAIT_30S:
+//		{
+//			emberAfCorePrintln("LD2410_DETECT_UNMOTION");
+//			LD2410_Handle(LD2410_UNMOTION);
+//		} break;
+//
+//		default:
+//			break;
+//	}
 }
 
 /*

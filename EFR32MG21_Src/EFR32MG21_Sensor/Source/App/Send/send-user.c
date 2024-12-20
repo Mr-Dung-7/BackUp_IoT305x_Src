@@ -94,30 +94,6 @@ void SEND_SendCommandUnicast (EmberNodeId nodeId, uint8_t sourceEp, uint8_t desE
 }
 
 /*
- * @func:		SEND_LeaveResponse
- *
- * @brief:		The function sends a ZDO leave network notification to the Home Controller
- *
- * @params:		None
- *
- * @retVal:		None
- *
- * @note:		None
- */
-void SEND_LeaveResponse (void)
-{
-	uint8_t contents[2];
-	contents[1] = 0x00;
-
-	// Transmit ZDO message
-	emberSendZigDevRequest(HC_NETWORK_ADDRESS,
-						   LEAVE_RESPONSE,
-						   EMBER_AF_DEFAULT_APS_OPTIONS,
-						   contents,
-						   sizeof(contents));
-}
-
-/*
  * @func:		SEND_ReportInfoToHC
  *
  * @brief:		The function sends information to the Home Controller
@@ -147,89 +123,6 @@ void SEND_ReportInfoToHC (void)
 
 	SEND_SendCommandUnicast(HC_NETWORK_ADDRESS,
 							SOURCE_ENDPOINT_PRIMARY,
-							DESTINATION_ENDPOINT);
-}
-
-/*
- * @func:		SEND_KeepAliveToZc
- *
- * @brief:		The function sends keep alive message to the Home Controller
- *
- * @params:		None
- *
- * @retVal:		None
- *
- * @note:		None
- */
-void SEND_KeepAliveToZc (void)
-{
-	if(emberAfNetworkState() != EMBER_JOINED_NETWORK)
-	{
-		return;
-	}
-
-	// Send Keep Alive to ZC
-	SEND_FillBufferGlobalCommand(ZCL_KEEPALIVE_CLUSTER_ID,
-								 ZCL_KEEPALIVE_BASE_ATTRIBUTE_ID,
-								 0,
-								 NULL,
-								 0,
-								 ZCL_INT8U_ATTRIBUTE_TYPE);
-
-	SEND_SendCommandUnicast(HC_NETWORK_ADDRESS,
-							SOURCE_ENDPOINT_PRIMARY,
-							DESTINATION_ENDPOINT);
-}
-
-/*
- * @func:		SEND_OnOffStateReport
- *
- * @brief:		The function sends an LED on/off notification to the Home Controller
- *
- * @params[1]:	sourceEp - Source endpoint
- * @params[2]:	state - LED status
- *
- * @retVal:		None
- *
- * @note:		None
- */
-void SEND_OnOffStateReport (uint8_t sourceEp, uint8_t state)
-{
-	SEND_FillBufferGlobalCommand(ZCL_ON_OFF_CLUSTER_ID,
-								 ZCL_ON_OFF_ATTRIBUTE_ID,
-								 ZCL_READ_ATTRIBUTES_RESPONSE_COMMAND_ID,
-								 (uint8_t*)&state,
-								 1,
-								 ZCL_BOOLEAN_ATTRIBUTE_TYPE);
-
-	SEND_SendCommandUnicast(HC_NETWORK_ADDRESS,
-							sourceEp,
-							DESTINATION_ENDPOINT);
-}
-
-/*
- * @func:		SEND_LevelStateReport
- *
- * @brief:		The function sends the LED brightness value to the Home Controller
- *
- * @params[1]:	sourceEp - Source endpoint
- * @params[2]:	value - LED brightness value
- *
- * @retVal:		None
- *
- * @note:		None
- */
-void SEND_LevelStateReport (uint8_t sourceEp, uint8_t value)
-{
-	SEND_FillBufferGlobalCommand(ZCL_LEVEL_CONTROL_CLUSTER_ID,
-								 ZCL_CURRENT_LEVEL_ATTRIBUTE_ID,
-								 ZCL_READ_ATTRIBUTES_RESPONSE_COMMAND_ID,
-								 (uint8_t*)&value,
-								 1,
-								 ZCL_INT8U_ATTRIBUTE_TYPE);
-
-	SEND_SendCommandUnicast(HC_NETWORK_ADDRESS,
-							sourceEp,
 							DESTINATION_ENDPOINT);
 }
 
@@ -344,6 +237,58 @@ void SEND_LD2410StateReport (uint8_t sourceEP, uint8_t value)
 }
 
 /*
+ * @func:		SEND_OnOffStateReport
+ *
+ * @brief:		The function sends an LED on/off notification to the Home Controller
+ *
+ * @params[1]:	sourceEp - Source endpoint
+ * @params[2]:	state - LED status
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+void SEND_OnOffStateReport (uint8_t sourceEp, uint8_t state)
+{
+	SEND_FillBufferGlobalCommand(ZCL_ON_OFF_CLUSTER_ID,
+								 ZCL_ON_OFF_ATTRIBUTE_ID,
+								 ZCL_READ_ATTRIBUTES_RESPONSE_COMMAND_ID,
+								 (uint8_t*)&state,
+								 1,
+								 ZCL_BOOLEAN_ATTRIBUTE_TYPE);
+
+	SEND_SendCommandUnicast(HC_NETWORK_ADDRESS,
+							sourceEp,
+							DESTINATION_ENDPOINT);
+}
+
+/*
+ * @func:		SEND_LevelStateReport
+ *
+ * @brief:		The function sends the LED brightness value to the Home Controller
+ *
+ * @params[1]:	sourceEp - Source endpoint
+ * @params[2]:	value - LED brightness value
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+void SEND_LevelStateReport (uint8_t sourceEp, uint8_t value)
+{
+	SEND_FillBufferGlobalCommand(ZCL_LEVEL_CONTROL_CLUSTER_ID,
+								 ZCL_CURRENT_LEVEL_ATTRIBUTE_ID,
+								 ZCL_READ_ATTRIBUTES_RESPONSE_COMMAND_ID,
+								 (uint8_t*)&value,
+								 1,
+								 ZCL_INT8U_ATTRIBUTE_TYPE);
+
+	SEND_SendCommandUnicast(HC_NETWORK_ADDRESS,
+							sourceEp,
+							DESTINATION_ENDPOINT);
+}
+
+/*
  * @func:		SEND_ResendZclCommandViaBinding
  *
  * @brief:		Generate ZCL command and send to all device appear in the binding table
@@ -408,6 +353,61 @@ void SEND_ResendZclCommandViaBinding (uint8_t localEndpoint, uint8_t remoteEndpo
 			}
 		}
 	}
+}
+
+/*
+ * @func:		SEND_KeepAliveToZc
+ *
+ * @brief:		The function sends keep alive message to the Home Controller
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+void SEND_KeepAliveToZc (void)
+{
+	if(emberAfNetworkState() != EMBER_JOINED_NETWORK)
+	{
+		return;
+	}
+
+	// Send Keep Alive to ZC
+	SEND_FillBufferGlobalCommand(ZCL_KEEPALIVE_CLUSTER_ID,
+								 ZCL_KEEPALIVE_BASE_ATTRIBUTE_ID,
+								 0,
+								 NULL,
+								 0,
+								 ZCL_INT8U_ATTRIBUTE_TYPE);
+
+	SEND_SendCommandUnicast(HC_NETWORK_ADDRESS,
+							SOURCE_ENDPOINT_PRIMARY,
+							DESTINATION_ENDPOINT);
+}
+
+/*
+ * @func:		SEND_LeaveResponse
+ *
+ * @brief:		The function sends a ZDO leave network notification to the Home Controller
+ *
+ * @params:		None
+ *
+ * @retVal:		None
+ *
+ * @note:		None
+ */
+void SEND_LeaveResponse (void)
+{
+	uint8_t contents[2];
+	contents[1] = 0x00;
+
+	// Transmit ZDO message
+	emberSendZigDevRequest(HC_NETWORK_ADDRESS,
+						   LEAVE_RESPONSE,
+						   EMBER_AF_DEFAULT_APS_OPTIONS,
+						   contents,
+						   sizeof(contents));
 }
 
 /* END FILE */

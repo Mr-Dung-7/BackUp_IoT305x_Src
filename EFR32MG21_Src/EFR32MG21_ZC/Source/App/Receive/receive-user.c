@@ -84,6 +84,8 @@ boolean emberAfPreCommandReceivedCallback (EmberAfClusterCommand *cmd)
 	uint8_t commandID = cmd->commandId;
 	uint16_t attrID = (uint16_t)(cmd->buffer[cmd->payloadStartIndex] | cmd->buffer[cmd->payloadStartIndex + 1] << 8);
 	uint16_t bufIndex = cmd->payloadStartIndex + 4; 	// buffer payload start index
+	uint8_t payload[1];
+	payload[0] = cmd->buffer[bufIndex];
 
 	switch(clusterID)
 	{
@@ -109,6 +111,68 @@ boolean emberAfPreCommandReceivedCallback (EmberAfClusterCommand *cmd)
 			return true;
 		}
 
+		case ZCL_TEMP_MEASUREMENT_CLUSTER_ID:
+		{
+			if(attrID == ZCL_TEMP_MEASURED_VALUE_ATTRIBUTE_ID)
+			{
+				if(g_receiveHandler != NULL)
+				{
+					g_receiveHandler(nodeId, DEVICE_SENSOR_TEMP_VALUE, payload, 1);
+				}
+			}
+
+			break;
+		}
+
+		case ZCL_RELATIVE_HUMIDITY_MEASUREMENT_CLUSTER_ID:
+		{
+			if(attrID == ZCL_RELATIVE_HUMIDITY_MEASURED_VALUE_ATTRIBUTE_ID)
+			{
+				if(g_receiveHandler != NULL)
+				{
+					g_receiveHandler(nodeId, DEVICE_SENSOR_HUMI_VALUE, payload, 1);
+				}
+			}
+
+			break;
+		}
+
+		case ZCL_ILLUM_MEASUREMENT_CLUSTER_ID:
+		{
+			if(attrID == ZCL_ILLUM_MEASURED_VALUE_ATTRIBUTE_ID)
+			{
+				if(g_receiveHandler != NULL)
+				{
+					g_receiveHandler(nodeId, DEVICE_SENSOR_LIGHT_VALUE, payload, 2);
+				}
+			}
+
+			break;
+		}
+
+		case ZCL_IAS_ZONE_CLUSTER_ID:
+		{
+			if(attrID == ZCL_ZONE_STATE_ATTRIBUTE_ID)
+			{
+				if (payload[0] == 1)
+				{
+					if(g_receiveHandler != NULL)
+					{
+						g_receiveHandler(nodeId, DEVICE_SENSOR_LD2410_MOTION, payload, 1);
+					}
+				}
+				else
+				{
+					if(g_receiveHandler != NULL)
+					{
+						g_receiveHandler(nodeId, DEVICE_SENSOR_LD2410_UNMOTION, payload, 1);
+					}
+				}
+			}
+
+			break;
+		}
+
 		case ZCL_ON_OFF_CLUSTER_ID:		// Xu ly khi nhan ban tin On/Off tu thiet bi LED
 		{
 			if (commandID == ZCL_ON_COMMAND_ID)
@@ -119,7 +183,9 @@ boolean emberAfPreCommandReceivedCallback (EmberAfClusterCommand *cmd)
 			{
 				g_receiveHandler(nodeId, DEVICE_LED_OFF, NULL, 0);
 			}
-		} break;
+
+			break;
+		}
 
 		case ZCL_KEEPALIVE_CLUSTER_ID:
 		{
@@ -127,7 +193,9 @@ boolean emberAfPreCommandReceivedCallback (EmberAfClusterCommand *cmd)
 			{
 				g_receiveHandler(nodeId, DEVICE_UPDATE_TIME, NULL, 0);
 			}
-		} break;
+
+			break;
+		}
 
 		default:
 			break;

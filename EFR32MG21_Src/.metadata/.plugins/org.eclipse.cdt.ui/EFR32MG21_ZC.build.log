@@ -1,4 +1,4 @@
-23:14:21 **** Incremental Build of configuration GNU ARM v7.2.1 - Default for project EFR32MG21_ZC ****
+18:26:04 **** Incremental Build of configuration GNU ARM v7.2.1 - Default for project EFR32MG21_ZC ****
 make -j4 pre-build main-build 
 cmd //c 'D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC/EFR32MG21_ZC-prebuild.bat' 'EFR32MG21_ZC' 'D:/1_Studying/1_IoT/1_FUNIX/IOT305x_01-A_VN/EFR32MG21_Src/EFR32MG21_ZC' '' 'D:\SiliconLabs\SimplicityStudio\v4'
 Building file: ../Source/App/Main/main-zc.c
@@ -30,9 +30,9 @@ section                     size        addr
 .aat                         172          84
 .intvec                        0         512
 .vectors                     308         512
-.text                     199532         820
-.rodata                    30616      200352
-.ARM.exidx                     8      230968
+.text                     199676         820
+.rodata                    30680      200496
+.ARM.exidx                     8      231176
 .data                       2404   536877760
 .simee                     32768      483328
 .lockbits_in_mainflash      8192      516096
@@ -44,16 +44,16 @@ section                     size        addr
 .heap                       3072   536892320
 .ARM.attributes               54           0
 .comment                     126           0
-.debug_info              1235109           0
-.debug_abbrev             102984           0
-.debug_loc                204748           0
+.debug_info              1235246           0
+.debug_abbrev             102961           0
+.debug_loc                204575           0
 .debug_aranges             14592           0
-.debug_ranges              22808           0
+.debug_ranges              22776           0
 .debug_macro              575790           0
-.debug_line               910510           0
-.debug_str               2307700           0
-.debug_frame               41636           0
-Total                    5712193
+.debug_line               910545           0
+.debug_str               2307834           0
+.debug_frame               41620           0
+Total                    5712463
 
 
  
@@ -62,5 +62,5 @@ cmd //c 'D:\1_Studying\1_IoT\1_FUNIX\IOT305x_01-A_VN\EFR32MG21_Src\EFR32MG21_ZC/
 NULL Bootloader image detected, not running postbuild process
  
 
-23:14:44 Build Finished (took 23s.819ms)
+18:26:29 Build Finished (took 24s.150ms)
 

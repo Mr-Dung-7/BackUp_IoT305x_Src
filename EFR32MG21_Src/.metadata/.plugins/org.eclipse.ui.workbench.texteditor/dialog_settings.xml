@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="void Si7020_UpdateValueTempHumi (void)" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="NETWORK_CreateNetwork"/>
-			<item value="led_Init"/>
-			<item value="void Main_NetworkHandle (NetworkState_e networkResult)"/>
-			<item value="void Main_ButtonPressHandle (uint8_t button, uint8_t pressCount)"/>
-			<item value="void Main_ButtonHoldHandle (uint8_t button, uint8_t holdCount)"/>
-			<item value="void Main_Usart2RxHandle (USART_STATE_e UsartStateRx)"/>
-			<item value="Main_ReceiveLeaveHandle"/>
-			<item value="void Main_ReceiveLeaveHandle (EmberNodeId nodeId, RECEIVE_CMD_ID_e receiveId)"/>
+			<item value="void Si7020_UpdateValueTempHumi (void)"/>
+			<item value="boolean Si7020_MeasureTempAndHumi (uint32_t *tempData, uint32_t *humiData)"/>
+			<item value="boolean Si7020_Measure (uint32_t *buffer, uint8_t command)"/>
+			<item value="void i2cInit (void)"/>
+			<item value="boolean Si7020_Init (void)"/>
+			<item value="void LDR_UpdateValueLight (void)"/>
+			<item value="void LDR_Read (uint32_t *luxValue)"/>
+			<item value="void LDR_Init (void)"/>
 		</list>
 		<list key="replacehistory">
 			<item value="g_RxBufState"/>
@@ -30,7 +30,7 @@
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="1065" key="DIALOG_X_ORIGIN"/>
-		<item value="146" key="DIALOG_Y_ORIGIN"/>
+		<item value="1108" key="DIALOG_X_ORIGIN"/>
+		<item value="140" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

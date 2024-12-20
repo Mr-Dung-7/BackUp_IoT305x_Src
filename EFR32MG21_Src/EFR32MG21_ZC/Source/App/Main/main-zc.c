@@ -60,15 +60,10 @@ void emberAfMainInitCallback (void)
 	emberAfCorePrintln("emberAfMainInitCallback");
 
 	NETWORK_Init(Main_NetworkHandle);
-
 	RECEIVE_Init(Main_ReceiveHandle);
-
 	Button_Init(Main_ButtonPressHandle, Main_ButtonHoldHandle);
-
 	led_Init();
-
 	Timer_Init(10);
-
 	USART2_Init(Main_Usart2RxHandle);
 
 	systemState = POWER_ON_STATE;
@@ -97,7 +92,6 @@ void mainStateEventHandler (void)
 		case POWER_ON_STATE:
 		{
 			systemState = IDLE_STATE;
-
 			// Khi duoc cap nguon thi lam gi???
 		} break;
 
@@ -264,7 +258,8 @@ void Main_ButtonHoldHandle (uint8_t button, uint8_t holdCount)
  *
  * @note:		None
  */
-void Main_ReceiveHandle(EmberNodeId nodeId, RECEIVE_CMD_ID_e receiveId, uint8_t *payload, uint8_t length)
+void Main_ReceiveHandle(EmberNodeId nodeId, RECEIVE_CMD_ID_e receiveId,
+						uint8_t *payload, uint8_t length)
 {
 	bool checkTime	= false;
 
@@ -274,42 +269,92 @@ void Main_ReceiveHandle(EmberNodeId nodeId, RECEIVE_CMD_ID_e receiveId, uint8_t 
 		{
 			checkTime = true;
 			DeviceManager_AddDeviceToList(nodeId, (char*)payload);
-		} break;
+			break;
+		}
 
 		case DEVICE_LEAVE_NETWORK:
 		{
 			DeviceManager_RemoveDeviceFromList(nodeId);
-		} break;
+			break;
+		}
 
-		case DEVICE_CONNECTED:
+		case DEVICE_CONNECTED:	// Chua co callback truyen ve
 		{
 			checkTime = true;
 			DeviceManager_SetDeviceOnline(nodeId);
+			break;
+		}
 
-		} break;
-
-		case DEVICE_DISCONNECTED:
+		case DEVICE_DISCONNECTED:	// Chua co callback truyen ve
 		{
 			checkTime = true;
 			DeviceManager_SetDeviceOffline(nodeId);
-		} break;
+			break;
+		}
+
+		case DEVICE_SENSOR_TEMP_VALUE:
+		{
+			checkTime = true;
+			// Gui ban tin UART gia tri Temp cho STM32
+			emberAfCorePrintln("Temp: %d", *payload);
+			break;
+		}
+
+		case DEVICE_SENSOR_HUMI_VALUE:
+		{
+			checkTime = true;
+			// Gui ban tin UART gia tri Humi cho STM32
+			emberAfCorePrintln("Humi: %d", *payload);
+			break;
+		}
+
+		case DEVICE_SENSOR_LIGHT_VALUE:
+		{
+			checkTime = true;
+			// Gui ban tin UART gia tri Light cho STM32
+			emberAfCorePrintln("Light: %d", *payload);
+			break;
+		}
+
+		case DEVICE_SENSOR_LD2410_MOTION:
+		{
+			checkTime = true;
+			// Gui ban tin UART MOTION cho STM32
+			emberAfCorePrintln("MOTION: %d", *payload);
+			break;
+		}
+
+		case DEVICE_SENSOR_LD2410_UNMOTION:
+		{
+			checkTime = true;
+			// Gui ban tin UART UNMOTION cho STM32
+			emberAfCorePrintln("UNMOTION: %d", *payload);
+			break;
+		}
 
 		case DEVICE_LED_ON:
 		{
 			checkTime = true;
+			// Gui ban tin UART LED On cho STM32
+			emberAfCorePrintln("LED ON: %d", *payload);
 			DeviceManager_SetStateLedOn(nodeId);
-		} break;
+			break;
+		}
 
 		case DEVICE_LED_OFF:
 		{
 			checkTime = true;
+			// Gui ban tin UART LED Off cho STM32
+			emberAfCorePrintln("LED OFF: %d", *payload);
 			DeviceManager_SetStateLedOff(nodeId);
-		} break;
+			break;
+		}
 
 		case DEVICE_UPDATE_TIME:
 		{
 			checkTime = true;
-		} break;
+			break;
+		}
 
 		default:
 			break;
@@ -350,7 +395,7 @@ void Main_Usart2RxHandle (USART_STATE_e UsartStateRx)
 			case USART_STATE_DATA_RECEIVED:
 			{
 				emberAfCorePrintln("USART_STATE_DATA_RECEIVED\n");
-				USART_ReceivedData();
+//				USART_ReceivedData();
 				break;
 			}
 
